@@ -2,179 +2,135 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Pezanne Khambatta</title>
-    <meta name="description" content="I'm a product and furniture designer.I also like to code.">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
-    <link rel="stylesheet" href="site.css">
-	<script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Home - Pezanne Khambatta</title>
+	<meta name="description" content="I'm a product and furniture designer.I also like to code.">
+ 	<link rel="stylesheet" href="_assets/bootstrap/css/bootstrap.min.css">
+ 	<!-- Fonts -->
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700"> -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Open+Sans:400,700|Oswald|Raleway:400,700|Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+
+	<link rel="stylesheet" href="_assets/fonts/ionicons.min.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css"> --> 
 	
-	<script type="text/javascript">
-		$(function () {
-		  $(document).scroll(function () {
-			  if ($(this).scrollTop() > $('.fixed-top').height()) {
-				$('.fixed-top').addClass('scrolled').removeClass('gradient');
-			  } else {
-				$('.fixed-top').removeClass('scrolled').addClass('gradient');
-			  }
-			});
-		});
-		
-		var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
+	<!--Favicon-->
+    <link rel="shortcut icon" type="img/jpg" href="img/favicon.jpg">
+    <link rel="stylesheet" href="css/site.css">
 
-		TxtType.prototype.tick = function() {
-			var i = this.loopNum % this.toRotate.length;
-			var fullTxt = this.toRotate[i];
+	<script src="_assets/js/jquery.min.js"></script>
+	<script src="_assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script> -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
-			if (this.isDeleting) {
-			this.txt = fullTxt.substring(0, this.txt.length - 1);
-			} else {
-			this.txt = fullTxt.substring(0, this.txt.length + 1);
-			}
 
-			this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+	<script src="_assets/js/theme.js"></script>
+	<script src="_assets/js/typed.js"></script>
+	<script src="_assets/js/animsition.js"></script>
 
-			var that = this;
-			var delta = 200 - Math.random() * 100;
+	<script src="js/index.js"></script>
 
-			if (this.isDeleting) { delta /= 2; }
-
-			if (!this.isDeleting && this.txt === fullTxt) {
-			delta = this.period;
-			this.isDeleting = true;
-			} else if (this.isDeleting && this.txt === '') {
-			this.isDeleting = false;
-			this.loopNum++;
-			delta = 500;
-			}
-
-			setTimeout(function() {
-			that.tick();
-			}, delta);
-		};
-
-		window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
-        document.body.appendChild(css);
-    };
-	</script>
 </head>
 
 <body>
-    <main class="page landing-page">
-		<section class="d-xl-flex justify-content-xl-start portfolio-block block-intro border-bottom">
-			<nav class="navbar navbar-dark navbar-expand-lg fixed-top portfolio-navbar gradient">
-                <div class="container"><a class="navbar-brand logo" href="#">Pezanne Khambatta</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item item" role="presentation"><a class="nav-link active" href="#">Design</a></li>
-                            <li class="nav-item item" role="presentation"><a class="nav-link" href="#">Code</a></li>
-                            <li class="nav-item item" role="presentation"><a class="nav-link" href="#">Everything in between</a></li>
-                        </ul>
-					</div>
-                </div>
-            </nav>
-			<div class="container">
-				<div class="avatar" style="background-image:url('pezanne-memoji.jpg');"></div>
-				<div class="about-me">
-					<h3>Hello! I am <b>Pezanne</b>.</h3>
-					<h5> I&#39;m a product and furniture designer.</h5>
-					<h5><a href class="typewrite" data-period="2000" data-type="[ &quot;I also like to code.&quot; ]"><span class="wrap"></span></a></h5>
-				</div>
-			</div>
-		</section>
-		<section class="portfolio-block projects-cards">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-lg-4">
-						<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="Buckle End Table/BT1.png" alt="Card Image" /></a>
-							<div class="card-body">
-								<h6><a href="#">Buckle End Table</a></h6>
-							</div>
+	<main class="page landing-page">
+		<section class=" justify-content-xl-start block-intro border-bottom">
+			<div class="portfolio-block">
+				<nav class="navbar navbar-dark navbar-expand-lg fixed-top portfolio-navbar gradient">
+					<div class="container"><a class="navbar-brand logo" href="#">Pezanne Khambatta</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="nav navbar-nav ml-auto">
+								<li class="nav-item item" role="presentation"><a class="nav-link active" href="#">Design</a></li>
+								<li class="nav-item item" role="presentation"><a class="nav-link" href="#">Code</a></li>
+								<li class="nav-item item" role="presentation"><a class="nav-link" href="#">Everything in between</a></li>
+							</ul>
 						</div>
 					</div>
-					<div class="col-md-6 col-lg-4">
-						<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="Cube Side Table/CT1.png" alt="Card Image" /></a>
-							<div class="card-body">
-								<h6><a href="#">Cube Side Table</a></h6>
+				</nav>
+				<div class="container">
+					<div class="avatar" style="background-image:url('img/pezanne-memoji.jpg');"></div>
+						<div class="about-me">
+							<div class="row justify-content-center">
+								<div class="col-auto text-left">
+									<h1 class="display-4">Hello, I am <strong>Pezanne</strong>.</h1>
+									<h5> I&#39;m a product and furniture designer.</h5>
+									<h5> I also enjoy <span id="typing"></span>
+										<!-- <a href="" class="typewrite" data-period="500" data-type='[ " to code 💻.", "photography 📷.", "mathematics ➕.", "writing 📜.", "UX design."]'>
+											<span class="wrap"></span>
+										</a> -->
+										<!-- <h5><a href class="typewrite" data-period="2000" data-type="[ &quot;I also like to code.&quot; ]"><span class="wrap"></span></a></h5> -->
+									</h5>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-4">
-						<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="Elevated Bar Cart/EB1.jpg" alt="Card Image" /></a>
-							<div class="card-body">
-								<h6><a href="#">Elevated Bar Cart</a></h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-4">
-						<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="Leaning Planter/LP1.jpg" alt="Card Image" /></a>
-							<div class="card-body">
-								<h6><a href="#">Leaning Planter</a></h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-4">
-						<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="Tipsy Whiskey Glass/TW1.jpg" alt="Card Image" /></a>
-							<div class="card-body">
-								<h6><a href="#">Tipsy Whiskey Glass</a></h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-4">
-						<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="Tea Light Candle Holder/TL1.jpg" alt="Card Image" /></a>
-							<div class="card-body">
-								<h6><a href="#">Tea Light Candle Holder</a></h6>
-							</div>
-						</div>
 					</div>
 				</div>
+				<div class="container">
+					<div class="portfolio-block projects-cards">
+						<div class="row">
+							<div class="col-md-6 col-lg-4">
+								<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/buckle-end-table/BT1.png" alt="Card Image" /></a>
+									<div class="card-body">
+										<p><a href="#">Buckle End Table</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4">
+								<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/cube-side-table/CT1.png" alt="Card Image" /></a>
+									<div class="card-body">
+										<p><a href="#">Cube Side Table</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4">
+								<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/elevated-bar-cart/EB1.jpg" alt="Card Image" /></a>
+									<div class="card-body">
+										<p><a href="#">Elevated Bar Cart</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4">
+								<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/leaning-planter/LP1.jpg" alt="Card Image" /></a>
+									<div class="card-body">
+										<p><a href="#">Leaning Planter</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4">
+								<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/tipsy-whiskey-glass/TW1.jpg" alt="Card Image" /></a>
+									<div class="card-body">
+										<p><a href="#">Tipsy Whiskey Glass</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4">
+								<div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="img/tea-light-candle-holder/TL1.jpg" alt="Card Image" /></a>
+									<div class="card-body">
+										<p><a href="#">Tea Light Candle Holder</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 			</div>
 		</section>
-        <section class="portfolio-block photography">
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"></a></div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div>
-            <div class="social-icons"><a href="#"><i class="icon ion-social-instagram-outline"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a></div>
-        </div>
-    </footer>
-	
-	
-	
-	
+	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<!-- <div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div> -->
+			<div class="social-icons">
+				<a href="#">
+					<i class="icon ion-social-github"></i>
+				</a>
+				<a href="#">
+					<i class="icon ion-social-linkedin"></i>
+				</a>
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>
