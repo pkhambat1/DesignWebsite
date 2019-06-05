@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    $(function() {
+      var $el,
+      leftPos,
+      newWidth,
+      $mainNav = $(".navbar-nav");
+
+      $mainNav.append("<li id='magic-line'></li>");
+      var $magicLine = $("#magic-line");
+
+      $magicLine
+      .width($(".active").width())
+      .css("left", $(".active a").position().left)
+      .data("origLeft", $magicLine.position().left)
+      .data("origWidth", $magicLine.width());
+
+      $(".navbar-nav li a").hover(
+        function() {
+          $el = $(this);
+          leftPos = $el.position().left;
+          newWidth = $el.parent().width();
+          $magicLine.stop().animate({
+            left: leftPos,
+            width: newWidth
+          });
+        },
+        function() {
+          $magicLine.stop().animate({
+            left: $magicLine.data("origLeft"),
+            width: $magicLine.data("origWidth")
+          });
+        }
+        );
+    });
+
+// Credit: https://css-tricks.com/jquery-magicline-navigation
+
+</script>
+
+<style type="text/css">
+    #magic-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: #fe4902;
+  }
+</style>
+
+
+</head>
+<body>
+  <div id="app" class="container">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="mr-auto"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Register</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>

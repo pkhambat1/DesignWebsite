@@ -1,57 +1,16 @@
 
-$(function () {
-	// $('.animsition').animsition();
-	$(document).scroll(function () {
-		if ($(this).scrollTop() > $('.fixed-top').height()) {
-			$('.fixed-top').addClass('scrolled').removeClass('gradient');
-		} else {
-			$('.fixed-top').removeClass('scrolled').addClass('gradient');
-		}
-	});
-});
+// $(function () {
+// 	// $('.animsition').animsition();
+// 	$(document).scroll(function () {
+// 		if ($(this).scrollTop() > $('.fixed-top').height()) {
+// 			$('.fixed-top').addClass('scrolled').removeClass('gradient');
+// 		} else {
+// 			$('.fixed-top').removeClass('scrolled').addClass('gradient');
+// 		}
+// 	});
+// });
 
-var TxtType = function(el, toRotate, period) {
-	this.toRotate = toRotate;
-	this.el = el;
-	this.loopNum = 0;
-	this.period = parseInt(period, 10);
-	this.txt = '';
-	this.tick();
-	this.isDeleting = false;
-};
-
-TxtType.prototype.tick = function    () {
-	var i = this.loopNum % this.toRotate.length;
-	var fullTxt = this.toRotate[i];
-
-	if (this.isDeleting) {
-		this.txt = fullTxt.substring(0, this.txt.length - 1);
-	} else {
-		this.txt = fullTxt.substring(0, this.txt.length + 1);
-	}
-
-	this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-	var that = this;
-	var delta = 200 - Math.random() * 100;
-
-	if (this.isDeleting) { delta /= 2; }
-
-	if (!this.isDeleting && this.txt === fullTxt) {
-		delta = this.period;
-		this.isDeleting = true;
-	} else if (this.isDeleting && this.txt === '') {
-		this.isDeleting = false;
-		this.loopNum++;
-		delta = 500;
-	}
-
-	setTimeout(function() {
-		that.tick();
-	}, delta);
-};
-
-window.onload = function() {
+$(function() {
 	var elements = document.getElementsByClassName('typewrite');
 	for (var i=0; i<elements.length; i++) {
 		var toRotate = elements[i].getAttribute('data-type');
@@ -60,11 +19,47 @@ window.onload = function() {
 			new TxtType(elements[i], JSON.parse(toRotate), period);
 		}
 	}
-};	
+});	
 
 $(function(){
   $("#typing").typed({
-    strings: [" coding . . .", " drawing . . .", "writing . . .", " photography . . .", " math . . .", " cars . . .", " Apple keynotes . . .", " coding . . ."],
+    strings: ["", "", "", "", " coding . . .", "", " drawing . . .", "", "writing . . .", "", " photography . . .", "", " math . . .", "", " cars . . .", "", " Apple keynotes . . .", "", " coding . . ."],
     typeSpeed: 0
   });
 });
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  // if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+	if ($(this).scrollTop() > $('.fixed-top').height()) {
+	    $('.nav-link, .logo').css("color", "#212529");
+	    $('.fixed-top').css("padding", "5px 10px");
+	    $('.fixed-top').css("opacity", ".9");
+	    $('.fixed-top').css("background", "white");
+  	} else {
+  		$('.fixed-top').css("padding", "20px 10px");
+	    $('.fixed-top').css({"background" : ""}, {"opacity" : ""});
+	    $('.nav-link, .logo').css({"color" : ""});
+  }
+}
+
+
+
+// $(function() {
+//   var $el,
+//     leftPos,
+//     newWidth,
+//     $mainNav = $(".navbar-nav");
+
+//   $mainNav.append("<li id='magic-line'></li>");
+//   var $magicLine = $("#magic-line");
+
+//   $magicLine
+//     .width($(".active").width())
+//     .css("left", $(".active a").position().left)
+//     .data("origLeft", $magicLine.position().left)
+//     .data("origWidth", $magicLine.width());
+// });
+
+// Credit: https://css-tricks.com/jquery-magicline-navigation

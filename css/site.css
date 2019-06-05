@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  font-family: Open Sans, sans-serif;
-  font-size: 1rem;
+  /*font-family: Open Sans, sans-serif;*/
+  font-family: medium-content-serif-font, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -9,14 +10,154 @@ body {
   background-color: #fff;
 }
 
-h1.display-4 {
-    font-size: 2.3rem;
+/* latin */
+@font-face {
+  font-family: 'medium-content-serif-font';
+  font-weight: 400;
+  font-style: italic;
+  src: url('https://glyph.medium.com/font/81d2bf1/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/charter-400-italic.woff') format('woff');
+  unicode-range: U+0-7F,U+A0,U+200A,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026;
+}
+
+/* rest */
+@font-face {
+  font-family: 'medium-content-serif-font';
+  font-weight: 400;
+  font-style: italic;
+  src: url('https://glyph.medium.com/font/81d2bf1/3k-4f_4h-6bt_6bv-6c3_6c5-6c7_6ca-6cb_6ce-6ch_6cj-6cl_6cn-nvnj/charter-400-italic.woff') format('woff');
+  unicode-range: U+80-9F,U+A1-2009,U+200B-2013,U+2015-2017,U+201A-201B,U+201E-2021,U+2023-2025,U+2027-10FFFF;
+}
+
+/* rest */
+@font-face {
+  font-family: 'medium-content-serif-font';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://glyph.medium.com/font/be78681/3k-4f_4h-6bt_6bv-6c3_6c5-6c7_6ca-6cb_6ce-6ch_6cj-6cl_6cn-nvnj/charter-400-normal.woff') format('woff');
+  unicode-range: U+80-9F,U+A1-2009,U+200B-2013,U+2015-2017,U+201A-201B,U+201E-2021,U+2023-2025,U+2027-10FFFF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'medium-content-serif-font';
+  font-weight: 700;
+  font-style: italic;
+  src: url('https://glyph.medium.com/font/77a0c0c/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/charter-700-italic.woff') format('woff');
+  unicode-range: U+0-7F,U+A0,U+200A,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026;
+}
+
+/* rest */
+@font-face {
+  font-family: 'medium-content-serif-font';
+  font-weight: 700;
+  font-style: italic;
+  src: url('https://glyph.medium.com/font/77a0c0c/3k-4f_4h-6bt_6bv-6c3_6c5-6c7_6ca-6cb_6ce-6ch_6cj-6cl_6cn-nvnj/charter-700-italic.woff') format('woff');
+  unicode-range: U+80-9F,U+A1-2009,U+200B-2013,U+2015-2017,U+201A-201B,U+201E-2021,U+2023-2025,U+2027-10FFFF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'medium-content-serif-font';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://glyph.medium.com/font/f50d520/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/charter-700-normal.woff') format('woff');
+  unicode-range: U+0-7F,U+A0,U+200A,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026;
+}
+
+/* rest */
+@font-face {
+  font-family: 'medium-content-serif-font';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://glyph.medium.com/font/f50d520/3k-4f_4h-6bt_6bv-6c3_6c5-6c7_6ca-6cb_6ce-6ch_6cj-6cl_6cn-nvnj/charter-700-normal.woff') format('woff');
+  unicode-range: U+80-9F,U+A1-2009,U+200B-2013,U+2015-2017,U+201A-201B,U+201E-2021,U+2023-2025,U+2027-10FFFF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'medium-content-title-font';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://glyph.medium.com/font/78ce731/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/fell-400-normal.woff') format('woff');
+  unicode-range: U+0-7F,U+A0,U+200A,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026;
+}
+
+/* rest */
+@font-face {
+  font-family: 'medium-content-title-font';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://glyph.medium.com/font/78ce731/3k-4f_4h-6bt_6bv-6c3_6c5-6c7_6ca-6cb_6ce-6ch_6cj-6cl_6cn-nvnj/fell-400-normal.woff') format('woff');
+  unicode-range: U+80-9F,U+A1-2009,U+200B-2013,U+2015-2017,U+201A-201B,U+201E-2021,U+2023-2025,U+2027-10FFFF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'medium-content-slab-serif-font';
+  font-weight: 300;
+  font-style: italic;
+  src: url('https://glyph.medium.com/font/24e0824/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/marat-sans-300-italic.woff') format('woff');
+  unicode-range: U+0-7F,U+A0,U+200A,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026;
+}
+
+/* rest */
+@font-face {
+  font-family: 'medium-content-slab-serif-font';
+  font-weight: 300;
+  font-style: italic;
+  src: url('https://glyph.medium.com/font/24e0824/3k-4f_4h-6bt_6bv-6c3_6c5-6c7_6ca-6cb_6ce-6ch_6cj-6cl_6cn-nvnj/marat-sans-300-italic.woff') format('woff');
+  unicode-range: U+80-9F,U+A1-2009,U+200B-2013,U+2015-2017,U+201A-201B,U+201E-2021,U+2023-2025,U+2027-10FFFF;
+}
+
+/* rest */
+@font-face {
+  font-family: 'medium-content-sans-serif-font';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://glyph.medium.com/font/d8659c9/3k-4f_4h-6bt_6bv-6c3_6c5-6c7_6ca-6cb_6ce-6ch_6cj-6cl_6cn-nvnj/marat-sans-400-normal.woff') format('woff');
+  unicode-range: U+80-9F,U+A1-2009,U+200B-2013,U+2015-2017,U+201A-201B,U+201E-2021,U+2023-2025,U+2027-10FFFF;
+}
+
+/* rest */
+@font-face {
+  font-family: 'medium-content-sans-serif-font';
+  font-weight: 600;
+  font-style: normal;
+  src: url('https://glyph.medium.com/font/6f4b679/3k-4f_4h-6bt_6bv-6c3_6c5-6c7_6ca-6cb_6ce-6ch_6cj-6cl_6cn-nvnj/marat-sans-600-normal.woff') format('woff');
+  unicode-range: U+80-9F,U+A1-2009,U+200B-2013,U+2015-2017,U+201A-201B,U+201E-2021,U+2023-2025,U+2027-10FFFF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'medium-marketing-display-font';
+  font-weight: 500;
+  font-style: normal;
+  src: url('https://glyph.medium.com/font/b6752aa/0-3j_4g_6bu_6c4_6c8_6c9_6cc_6cd_6ci_6cm/noe-display-500-normal.woff') format('woff');
+  unicode-range: U+0-7F,U+A0,U+200A,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026;
+}
+
+/* rest */
+@font-face {
+  font-family: 'medium-marketing-display-font';
+  font-weight: 500;
+  font-style: normal;
+  src: url('https://glyph.medium.com/font/b6752aa/3k-4f_4h-6bt_6bv-6c3_6c5-6c7_6ca-6cb_6ce-6ch_6cj-6cl_6cn-nvnj/noe-display-500-normal.woff') format('woff');
+  unicode-range: U+80-9F,U+A1-2009,U+200B-2013,U+2015-2017,U+201A-201B,U+201E-2021,U+2023-2025,U+2027-10FFFF;
+}
+
+.title {
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
 
-strong {
+/*strong {
   font-weight: 600;
+}*/
+
+span {
+  font-size: 24px;
+  font-family: medium-content-serif-font;
 }
 
 html {
@@ -27,8 +168,8 @@ html {
 }
 
 .portfolio-block {
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding-bottom: 30px;
+  padding-top: 85px;
 }
 
 .border-bottom {
@@ -40,28 +181,33 @@ html {
   padding-bottom: 60px;
 }
 
-@media (min-width:768px) {
+/*@media (min-width:768px) {
   .portfolio-block {
     padding-bottom: 100px;
     padding-top: 100px;
   }
-}
+}*/
 
  .fixed-top {  
-	 transition:color 200ms linear; 
-	 transition:background-color 300ms linear; 
+	 transition:color 200ms ease-in; 
+	 transition:background-color 300ms ease-in; 
  } 
 
 .fixed-top.scrolled {
   background-color: white;
   opacity: 0.95;
-  transition: background-color 300ms linear;
-  transition: opacity 300ms linear;
+  transition: background-color 300ms ease-in;
+  transition: opacity 300ms ease-in;
 }
 
 .fixed-top.scrolled .nav-link, .fixed-top.scrolled.navbar-dark .navbar-nav .nav-link.active,.fixed-top.scrolled.navbar-dark .navbar-brand {
   color: #555; /* Black */
-  transition: color 200ms linear;
+  transition: color 200ms ease-in;
+}
+
+.navbar.scrolled {
+    height: 70px;
+    transition: height 300ms ease-in
 }
 
 .navbar-nav > li {
@@ -83,7 +229,7 @@ html {
 }
 
 .typed-cursor {
-    /*color: #66ff66;*/
+    color: #66ff66;
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
@@ -118,12 +264,34 @@ html {
     margin: auto;
     border-radius: 100px;
     margin-bottom: 30px;
+    margin-top: 50px;
 }
 
-@media (min-width: 1200px)
-.container {
-    max-width: 1215px;
+.page-footer {
+  padding: none;
 }
+
+#magic-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: #fe4902;
+}
+
+.portfolio-navbar .logo {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+#navbar {
+  transition: 0.4s;
+}
+
+/*font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;*/
+/*font-family: medium-content-sans-serif-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;*/
+
 
 
 
