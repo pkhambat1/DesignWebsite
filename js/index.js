@@ -33,13 +33,14 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 	if ($(this).scrollTop() > $('.fixed-top').height()) {
 	    // $('.portfolio-navbar .navbar-nav .nav-link, #logo').css("color", "#212529");
-	    $('#logo').css({"font-size" : "23px"});
-	    $('.portfolio-navbar .navbar-nav .nav-link').css({"font-size" : "19px"});
+	    // $('#logo').css({"font-size" : "20px"});
+	    // $('.portfolio-navbar .navbar-nav .nav-link').css({"font-size" : "17px"});
 	    $('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"color" : "#212529"});
 	    // $('.portfolio-navbar .navbar-nav .nav-link').css("font-size", "17px");
-	    $('.navbar-dark').css("padding", "5px 10px");
-	    $('.navbar-dark').css("opacity", ".9");
+	    $('.navbar-dark').css("padding", "0px 10px");
+	    $('.navbar-dark').css("opacity", ".96");
 	    $('.navbar-dark').css("background", "#fff");
+	    $('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.1)");
   	} else {
   		// $('.navbar-dark').css({"padding" : ""});
 	   //  $('.navbar-dark').css({"background" : ""}, {"opacity" : ""});
@@ -49,6 +50,7 @@ function scrollFunction() {
 	    $('.navbar-dark').css({"padding" : ""});
 	    $('.navbar-dark').css({"opacity" : ""});
 	    $('.navbar-dark').css({"background" : ""});
+	    $('.portfolio-navbar.navbar').css({"box-shadow" : ""});
   }
 }
 
