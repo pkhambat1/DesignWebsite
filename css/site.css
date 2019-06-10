@@ -425,7 +425,7 @@ a:hover {
 
 .owl-dots {
   max-height: 20px;
-  transition: .2s;
+  transition: .4s;
 }
 
 .owl-theme .owl-nav {
@@ -440,7 +440,7 @@ a:hover {
 }
 
 .owl-theme .owl-nav :not(.disabled) {
-  transition: opacity .2s;
+  transition: opacity .4s;
   color: white;
 }
 

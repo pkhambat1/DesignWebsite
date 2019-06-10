@@ -65,3 +65,9 @@ $(document).ready(function() {
   		$(this).find('.owl-dots').css("opacity", "0");
 	});
 });
+
+$(document).ready(function(){
+    $('.carousel-control-prev, .carousel-control-next, .owl-dots').on('click', function(){
+        $('html,body').animate({scrollTop: $(this).closest('.rect').offset().top - 80}, 400);
+    }); 
+});  
