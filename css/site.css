@@ -420,11 +420,6 @@ img {
   /*background-color: rgba(255,255,255,.5);*/
 }
 
-.carousel-control-prev, .carousel-control-next {
-  width: 5%;
-
-} 
-
 .arrowbox {
   background-color: black;
   width: 35px;
@@ -442,6 +437,12 @@ img {
   /*display: none;*/
   max-height: 0px;
   margin-top: 0px;
+  transition: opacity 0.2s!important;
+}
+
+.owl-theme .owl-nav .disabled {
+  /*opacity: 0;*/
+  /*transition: 0.2s;*/
 }
 
 
