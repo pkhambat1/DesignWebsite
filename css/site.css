@@ -447,6 +447,15 @@ img {
   transition: opacity .2s;
 }
 
+.svg-inline--fa {
+  font-size: 28px;
+  color: #212529;
+}
+
+.navbar-toggler {
+  border: 0px;
+}
+
 
 
 
