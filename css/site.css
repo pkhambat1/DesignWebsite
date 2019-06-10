@@ -434,16 +434,19 @@ img {
 }
 
 .owl-theme .owl-nav {
-  /*display: none;*/
+  opacity: 1;
   max-height: 0px;
   margin-top: 0px;
-  transition: opacity 0.2s!important;
 }
 
 .owl-theme .owl-nav .disabled {
-  /*opacity: 0;*/
-  /*transition: 0.2s;*/
+  opacity: 0;
+  transition: opacity .2s;
 }
+.owl-theme .owl-nav :not(.disabled) {
+  transition: opacity .2s;
+}
+
 
 
 
