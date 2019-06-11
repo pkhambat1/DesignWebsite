@@ -188,10 +188,10 @@ p, p:hover {
   text-decoration: none;
 }
 
-a {
-  color: #2e2e2e;
+/*a {
+  color: gray;
   background-color: transparent;
-}
+}*/
 
 span {
   font-size: 23px;
@@ -311,7 +311,12 @@ html {
 #logo {
   font-size: 30px;
   font-weight: 600;
+  color: rgba(0,0,0,1);
   /*padding-top: 10px;*/
+}
+
+#logo:hover, #hamburger:hover {
+  color: rgba(0,0,0,.7);
 }
 
 .nav-item {
@@ -327,15 +332,12 @@ html {
 
 .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link.active {
   color: #212529;
+  padding: 10px 15px 10px 15px;
 }
 
-.portfolio-navbar .navbar-nav .nav-link, #logo {
+/*.portfolio-navbar .navbar-nav .nav-link, #logo {
   transition: .2s ease-in;
-}
-
-.portfolio-navbar.navbar {
-  box-shadow: none;
-}
+}*/
 
 .nav-link {
   font-weight: 700;
@@ -343,15 +345,16 @@ html {
   padding-top: 10px;
 }
 
-.nav-link:hover {
+/*.nav-link:hover {
   text-decoration: underline;
   transition: 0.2s;
-}
+}*/
 
 #fa-circle {
   color: blue;
+  /*color: #00A0DC;*/
   padding-bottom: 2px;
-  height: 16px;
+  height: 14px;
 }
 
 img {
@@ -361,11 +364,6 @@ img {
 
 .card-body {
   padding-left: 0rem;
-}
-
-a:hover {
-  color: none;
-  text-decoration: none;
 }
 
 .rect {
@@ -378,9 +376,9 @@ a:hover {
 }
 
 #owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 #owl-demo .owl-item div{
@@ -405,7 +403,7 @@ a:hover {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  width: 20px;
+  width: 12px;
   height: 3px;
   margin-right: 3px;
   margin-left: 3px;
@@ -471,8 +469,6 @@ a:hover {
   transition: .2s;
 }
 
-
-
-
-
-
+button:focus {
+  outline:0;
+}

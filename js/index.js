@@ -17,9 +17,8 @@ $(function(){
 	});
 });
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
+// If scrolled
+$(document).on('scroll', function() {
 	if ($(this).scrollTop() > $('.fixed-top').height()) {
 		$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"color" : "#212529"});
 		$('.navbar-light').css("padding", "0px 10px");
@@ -27,14 +26,41 @@ function scrollFunction() {
 		$('.navbar-light').css("background", "#fff");
 		$('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
 	} else {	
-		$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"font-size" : ""});
-		$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"color" : ""});
-		$('.navbar-light').css({"padding" : ""});
-		$('.navbar-light').css({"opacity" : ""});
-		$('.navbar-light').css({"background" : ""});
-		$('.portfolio-navbar.navbar').css({"box-shadow" : ""});
+		// if($('.navbar').is(":visible")){
+			$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"font-size" : ""});
+			$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"color" : ""});
+			$('.navbar-light').css({"padding" : ""});
+			$('.navbar-light').css({"opacity" : ""});
+			$('.navbar-light').css({"background" : ""});
+			$('.portfolio-navbar.navbar').css({"box-shadow" : ""});
+		// }
 	}
-}
+});
+
+$(document).ready(function() {
+
+	// If collapsed
+	$('.navbar').on('hide.bs.collapse', function () {
+		console.log($(document).scrollTop());
+		// If scrolled in
+		if ($(document).scrollTop() > $('.fixed-top').height()) {
+			// Add shadow
+			$('.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
+		// If at screen top
+		} else {
+			// Remove shadow
+			$('.navbar').css({"box-shadow" : ""});
+		}
+	});
+
+	// If uncollapsed
+	$('.navbar').on('show.bs.collapse', function () {
+		// Add shadow
+		$(this).css("box-shadow", "0 2px 10px rgba(0,0,0,.15)");
+	});
+});
+
+
 
 $(document).ready(function() {
 
@@ -48,8 +74,8 @@ $(document).ready(function() {
 		// navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
 		// navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
 		// navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"] 
-		navText: ["<div class=\"carousel-control-prev\" role=\"button\" data-slide=\"prev\"><div class=\"arrowbox\"><i class=\"fa fa-angle-left align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Previous</span></div>",
-		"<div class=\"carousel-control-next\" data-slide=\"next\"><div class='arrowbox'><i class='fa fa-angle-right align-middle mt-4 mb-4 arrowright'></i></div><span class=\"sr-only\">Next</span></div>"]
+		navText: 	["<div class=\"carousel-control-prev\" role=\"button\" data-slide=\"prev\"><div class=\"arrowbox\"><i class=\"fa fa-angle-left align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Previous</span></div>",
+					"<div class=\"carousel-control-next\" role=\"button\" data-slide=\"next\"><div class=\"arrowbox\"><i class=\"fa fa-angle-right align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Next</span></div>"]
 	});
 
 });
