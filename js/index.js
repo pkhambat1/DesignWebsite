@@ -1,4 +1,5 @@
 
+
 $(function() {
 	var elements = document.getElementsByClassName('typewrite');
 	for (var i=0; i<elements.length; i++) {
@@ -71,6 +72,7 @@ $(document).ready(function() {
 		mouseDrag:false,
 		autoplay:false,
 		nav:true,
+		lazyLoad:true,
 		// navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
 		// navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
 		// navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"] 
