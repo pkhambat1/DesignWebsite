@@ -1,4 +1,11 @@
+// Global vars
 
+var toggleVal = "initial";
+
+
+window.onload = function() {
+    document.body.className += " loaded";
+}
 
 $(function() {
 	var elements = document.getElementsByClassName('typewrite');
@@ -18,31 +25,38 @@ $(function(){
 	});
 });
 
-// If scrolled
-$(document).on('scroll', function() {
+function navbarChange(toggleVal) {
+	// if scrolled down
 	if ($(this).scrollTop() > $('.fixed-top').height()) {
 		$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"color" : "#212529"});
 		$('.navbar-light').css("padding", "0px 10px");
-		$('.navbar-light').css("opacity", ".96");
 		$('.navbar-light').css("background", "#fff");
-		$('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
+		$('.navbar-light').css("opacity", ".96");
+		if (toggleVal == "collapsed" || toggleVal == "initial") {
+			$('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
+		}
+	// if on top 
 	} else {	
-		// if($('.navbar').is(":visible")){
 			$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"font-size" : ""});
 			$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"color" : ""});
 			$('.navbar-light').css({"padding" : ""});
-			$('.navbar-light').css({"opacity" : ""});
 			$('.navbar-light').css({"background" : ""});
+			$('.navbar-light').css({"opacity" : ""});
+		if(toggleVal == "collapsed" || toggleVal == "initial"){
 			$('.portfolio-navbar.navbar').css({"box-shadow" : ""});
-		// }
+		}
 	}
+}
+
+// If scrolled
+$(document).on('scroll', function() {
+	navbarChange(toggleVal);
 });
 
 $(document).ready(function() {
 
 	// If collapsed
 	$('.navbar').on('hide.bs.collapse', function () {
-		console.log($(document).scrollTop());
 		// If scrolled in
 		if ($(document).scrollTop() > $('.fixed-top').height()) {
 			// Add shadow
@@ -52,12 +66,14 @@ $(document).ready(function() {
 			// Remove shadow
 			$('.navbar').css({"box-shadow" : ""});
 		}
+		toggleVal = "collapsed";
 	});
 
 	// If uncollapsed
 	$('.navbar').on('show.bs.collapse', function () {
 		// Add shadow
 		$(this).css("box-shadow", "0 2px 10px rgba(0,0,0,.15)");
+		toggleVal = "uncollapsed";
 	});
 });
 
@@ -73,9 +89,6 @@ $(document).ready(function() {
 		autoplay:false,
 		nav:true,
 		lazyLoad:true,
-		// navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-		// navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
-		// navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"] 
 		navText: 	["<div class=\"carousel-control-prev\" role=\"button\" data-slide=\"prev\"><div class=\"arrowbox\"><i class=\"fa fa-angle-left align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Previous</span></div>",
 					"<div class=\"carousel-control-next\" role=\"button\" data-slide=\"next\"><div class=\"arrowbox\"><i class=\"fa fa-angle-right align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Next</span></div>"]
 	});

@@ -1,3 +1,12 @@
+
+html {
+  font-family: Open Sans, sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+}
+
 body {
   margin: 0;
   /*font-family: Open Sans, sans-serif;*/
@@ -8,6 +17,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  height: 100%;
 }
 
 /* latin */
@@ -198,12 +208,6 @@ span {
   font-family: medium-content-serif-font;
 }
 
-html {
-  font-family: Open Sans, sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
-}
 
 .portfolio-block {
   padding-bottom: 30px;
@@ -350,7 +354,7 @@ html {
   transition: 0.2s;
 }*/
 
-#fa-circle {
+.fa-circle {
   color: blue;
   /*color: #00A0DC;*/
   padding-bottom: 2px;
@@ -471,4 +475,8 @@ img {
 
 button:focus {
   outline:0;
+}
+
+.hamburger {
+  vertical-align: middle;
 }
