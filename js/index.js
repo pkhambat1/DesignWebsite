@@ -9,9 +9,11 @@ $(window).on("resize", function(event){
   	if ($(this).width() >= 992 && toggleVal == "uncollapsed") {
   		console.log("if hit!");
   		toggleVal = "stretchUncollapsed";
+  		navbarChange("stretchUncollapsed");
   	} else if ($(this).width() < 992 && toggleVal == "stretchUncollapsed") {
   		console.log("else if hit!");
-  		toggleVal = "uncollapsed";
+  		toggleVal = "uncollapsed. navbarChange(\"uncollapsed\");";
+  		navbarChange("uncollapsed");
   	}
 
 
@@ -48,16 +50,18 @@ function navbarChange(toggleVal) {
 		$('.navbar-light').css("background", "#fff");
 		$('.navbar-light').css("opacity", ".96");
 		if (toggleVal == "uncollapsed") {
+			$('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
 			$('.navbar-light').css("padding", "0px 10px 10px");
 		} else {
 			$('.navbar-light').css("padding", "0px 10px");
 		}
 
-		if (toggleVal == "collapsed" || toggleVal == "initial" || toggleVal == "stretchUncollapsed") {
+		if (toggleVal == "collapsed" || toggleVal == "initial") {
 			$('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
 		}
 	// if on top 
 	} else {	
+			console.log("top + ");
 			$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"font-size" : ""});
 			$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"color" : ""});
 			$('.navbar-light').css({"padding" : ""});
@@ -65,6 +69,8 @@ function navbarChange(toggleVal) {
 			$('.navbar-light').css({"opacity" : ""});
 		if(toggleVal == "collapsed" || toggleVal == "initial" || toggleVal == "stretchUncollapsed"){
 			$('.portfolio-navbar.navbar').css({"box-shadow" : ""});
+		} else {
+			$('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
 		}
 	}
 }
@@ -74,34 +80,20 @@ $(document).on('scroll', function() {
 	navbarChange(toggleVal);
 });
 
-$(document).on('resize', function() {
-	navbarChange(toggleVal);
-});
-
-
 $(document).ready(function() {
 
 	// If collapsed
 	$('.navbar').on('hide.bs.collapse', function () {
-		// If scrolled in
-		if ($(document).scrollTop() > $('.fixed-top').height()) {
-			// Add shadow
-			$('.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
-		// If at screen top
-		} else {
-			// Remove shadow
-			$('.navbar').css({"box-shadow" : ""});
-		}
 		toggleVal = "collapsed";
-		console.log(toggleVal);
+		navbarChange("collapsed");
+		console.log(toggleVal + " on col. call navbarChange(\"collapsed\")");
 	});
 
 	// If uncollapsed
 	$('.navbar').on('show.bs.collapse', function () {
-		// Add shadow
-		$(this).css("box-shadow", "0 2px 10px rgba(0,0,0,.15)");
 		toggleVal = "uncollapsed";
-		console.log(toggleVal);
+		navbarChange("uncollapsed");
+		console.log(toggleVal + " on unc. call navbarChange(\"uncollapsed\")");
 	});
 });
 
@@ -110,7 +102,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 
 	$('.owl-carousel').owlCarousel({
-		items:itemCount,
+		items:1,
 		margin:0,
 		autoHeight:true,
 		// mouseDrag:false,
