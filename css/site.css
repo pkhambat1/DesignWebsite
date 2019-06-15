@@ -368,7 +368,6 @@ span {
   border-style:solid;
   border-width: 1px;
   border-color: rgb(0,0,0,.1);
-  margin: 1px;
 }
 
 .card-body {
@@ -376,13 +375,10 @@ span {
 }
 
 .rect {
-/*  border-style:solid;
-  border-width: 1px;
-  border-color: lightgrey;*/
-  background-color: white;
+  background-color: white; /* offwhite */
   box-shadow: 0 2px 10px rgba(0,0,0,.15);
   border-radius: 6px;
-  padding: 7px 7px 5px 7px;
+  padding: 5px 0px 5px 0px;
   margin-bottom: 25px;
   transition: max-height 2s;
 }
@@ -415,8 +411,8 @@ span {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  width: 12px;
-  height: 3px;
+  width: 8px;
+  height: 4px;
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
@@ -474,18 +470,18 @@ span {
 .carousel-control-prev {
   justify-content: flex-start;
   transition: .2s; 
-  left: -7px;
+  left: 0px;
 }
 
 .carousel-control-next {
   justify-content: flex-end;
   transition: .2s;
-  right: -7px;
+  right: 0px;
 }
 
 .carousel-control-prev, .carousel-control-next {
-  top: -8px;
-  bottom: 24px;
+/*  top: -8px;
+  bottom: 24px;*/
 }
 
 button:focus {
@@ -551,9 +547,11 @@ button:focus {
   border-radius: 6px;
   box-shadow: 0 1px 1px rgba(0,0,0,.15);
   padding: 1rem;
-  /*Due to owl-div glitch*/
-  margin: 1px;
   margin-left: .25rem;
   margin-right: .25rem;
+  background-color: #f9f9f9;  
+}
+
+.titleCaption {
   min-height: 180px;
 }

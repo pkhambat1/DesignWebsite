@@ -51,9 +51,9 @@ function navbarChange(toggleVal) {
 		$('.navbar-light').css("opacity", ".96");
 		if (toggleVal == "uncollapsed") {
 			$('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
-			$('.navbar-light').css("padding", "0px 10px 10px");
+			$('.navbar-light').css("padding", "0px 5px 10px");
 		} else {
-			$('.navbar-light').css("padding", "0px 10px");
+			$('.navbar-light').css("padding", "0px 5px");
 		}
 
 		if (toggleVal == "collapsed" || toggleVal == "initial") {
@@ -120,7 +120,10 @@ $(document).ready(function() {
 	    },
 		navText: ["<div class=\"carousel-control-prev\" role=\"button\" data-slide=\"prev\"><div class=\"arrowbox\"><i class=\"fa fa-angle-left align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Previous</span></div>",
 					"<div class=\"carousel-control-next\" role=\"button\" data-slide=\"next\"><div class=\"arrowbox\"><i class=\"fa fa-angle-right align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Next</span></div>"]
-	});	
+	}).on("dragged.owl.carousel", function (event) {
+		$('html,body').animate({scrollTop: $(this).closest('.rect').offset().top - 80}, 400);
+	});
+
 
 });
 
@@ -141,3 +144,5 @@ $(document).ready(function(){
         $('html,body').animate({scrollTop: $(this).closest('.rect').offset().top - 80}, 400);
     }); 
 });  
+
+
