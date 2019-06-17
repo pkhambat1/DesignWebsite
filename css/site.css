@@ -314,7 +314,7 @@ span {
 }
 
 #logo {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 600;
   color: rgba(0,0,0,1);
   /*padding-top: 10px;*/
@@ -411,8 +411,8 @@ span {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  width: 8px;
-  height: 4px;
+  width: 10px;
+  height: 6px;
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
@@ -556,4 +556,7 @@ button:focus {
 
 .titleCaption {
   min-height: 180px;
+}
+div.col-12 {
+  transition: .4s;
 }

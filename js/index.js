@@ -98,9 +98,10 @@ $(document).ready(function() {
 
 	$('.owl-carousel').owlCarousel({
 		items:1,
-		margin:0,
+		margin:3,
 		autoHeight:true,
 		mouseDrag:false,
+		stagePadding:0,
 		autoplay:false,
 		nav:true,
 		lazyLoad:true,
@@ -118,11 +119,6 @@ $(document).ready(function() {
 	}).on("dragged.owl.carousel", function (event) {
 		$('html,body').animate({scrollTop: $(this).closest('.rect').offset().top - 80}, 400);
 	});
-
-	var owl = $(".owl-carousel").data();
-	console.log(owl);
-
-
 });
 
 $(document).ready(function() {
@@ -139,16 +135,21 @@ $(document).ready(function() {
 
 $(document).ready(function(){
     $('.carousel-control-prev, .carousel-control-next, .owl-dots').on('click', function(){
-        $('html,body').animate({scrollTop: $(this).closest('.rect').offset().top - 80}, 400);
+        $('html,body').animate({scrollTop: $(this).closest('.rect').offset().top - 90}, 400);
     }); 
 });  
 
 $(document).ready(function(){
 	$('.owl-carousel').on('translate.owl.carousel', function(){
+		console.log('$(closest).find(\'.carousel-control-next\') :' + $(this).closest('.carousel-control-next'));
 		if ($(this).find('button.owl-prev').hasClass('disabled')) {
 			$(this).find('.carousel-control-next').css("width", "100%");
+			// $(this).closest('div.col-12').css("max-width", "80%");
+			// $(this).closest('div.col-12').css("margin-left", "3rem");
 		} else {
 			$(this).find('.carousel-control-next').css({"width" : "45px"});
+			// $(this).closest('div.col-12').css({"max-width" : ""});
+			// $(this).closest('div.col-12').css({"margin-right" : ""});
 		}
 	});
 });
