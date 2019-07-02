@@ -295,7 +295,6 @@ span {
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
-  border-radius: 100px;
   margin-bottom: 30px;
   margin-top: 50px;
 }
@@ -314,7 +313,7 @@ span {
 }
 
 #logo {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 600;
   color: rgba(0,0,0,1);
   /*padding-top: 10px;*/
@@ -368,6 +367,11 @@ span {
   border-style:solid;
   border-width: 1px;
   border-color: rgb(0,0,0,.1);
+  transition: .4s;
+}
+
+.item img:hover {
+  transform: scale(1.05)!important;
 }
 
 .card-body {
@@ -377,10 +381,10 @@ span {
 .rect {
   background-color: white; /* offwhite */
   box-shadow: 0 2px 10px rgba(0,0,0,.15);
-  border-radius: 6px;
-  padding: .25rem 0 .25rem 0;
+  border-radius: 25px;
+  padding: 1.5rem 0 .25rem 0;
   margin-bottom: 25px;
-  transition: max-height 2s;
+  transition: .4s;
 }
 
 #owl-demo .item img{
@@ -419,11 +423,11 @@ span {
 }
 
 .arrowbox {
-  /*opacity: 0;*/
+  opacity: 0;
   background-color: black;
   width: 45px;
   /*border-radius: 6px;*/
-  opacity: .6;
+  /*opacity: .6;*/
   vertical-align: middle;
   display: table-cell;
   font-size: 25px;
@@ -432,6 +436,7 @@ span {
 .owl-dots {
   height: 20px;
   transition: .4s;
+  opacity: 0;
 }
 
 .owl-theme .owl-nav {
@@ -472,6 +477,7 @@ span {
   transition: .2s; 
   left: 0px;
   width: 45px;
+  bottom: 20px;
 }
 
 .carousel-control-next {
@@ -480,20 +486,13 @@ span {
   right: 0px;
   width: 100%;
   /*width: 45px;*/
-}
-
-.carousel-control-prev, .carousel-control-next {
-  bottom: 20px
+  bottom: -4px;
+  top: -25px;
 }
 
 button:focus {
   outline:0;
 }
-
-.hamburger {
-  vertical-align: middle;
-}
-
 
 #nav-icon4 span:nth-child(1) {
   top: 0px;
@@ -557,6 +556,11 @@ button:focus {
 .titleCaption {
   min-height: 180px;
 }
+
 div.col-12 {
   transition: .4s;
+}
+
+.scale-on-hover:hover {
+  transform: scale(1.05);
 }

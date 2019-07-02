@@ -98,7 +98,7 @@ $(document).ready(function() {
 
 	$('.owl-carousel').owlCarousel({
 		items:1,
-		margin:3,
+		margin:4,
 		autoHeight:true,
 		mouseDrag:false,
 		stagePadding:0,
@@ -116,42 +116,73 @@ $(document).ready(function() {
 	    },
 		navText: ["<div class=\"carousel-control-prev\" role=\"button\" data-slide=\"prev\"><div class=\"arrowbox\"><i class=\"fa fa-angle-left align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Previous</span></div>",
 					"<div class=\"carousel-control-next\" role=\"button\" data-slide=\"next\"><div class=\"arrowbox\"><i class=\"fa fa-angle-right align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Next</span></div>"]
-	}).on("dragged.owl.carousel", function (event) {
-		$('html,body').animate({scrollTop: $(this).closest('.rect').offset().top - 80}, 400);
-	});
-});
-
-$(document).ready(function() {
-	$('.arrowbox, .owl-dots').css("opacity", "0");
-	$('.rect').hover(function(){
-      	$(this).find('.arrowbox').css("opacity", ".4");
-      	$(this).find('.owl-dots').css("opacity", "1");
-  	}, 
-	function() {
-  		$(this).find('.arrowbox').css("opacity", "0");
-  		$(this).find('.owl-dots').css("opacity", "0");
 	});
 });
 
 $(document).ready(function(){
     $('.carousel-control-prev, .carousel-control-next, .owl-dots').on('click', function(){
-        $('html,body').animate({scrollTop: $(this).closest('.rect').offset().top - 90}, 400);
+        $('html,body').animate({scrollTop: $(this).closest('.rect').offset().top - 80}, 400);
     }); 
 });  
 
 $(document).ready(function(){
 	$('.owl-carousel').on('translate.owl.carousel', function(){
-		console.log('$(closest).find(\'.carousel-control-next\') :' + $(this).closest('.carousel-control-next'));
 		if ($(this).find('button.owl-prev').hasClass('disabled')) {
-			$(this).find('.carousel-control-next').css("width", "100%");
-			// $(this).closest('div.col-12').css("max-width", "80%");
-			// $(this).closest('div.col-12').css("margin-left", "3rem");
+
+			// revert to right arrow control dimensions
+			$(this).find('.carousel-control-next').css({"width" : ""});
+			$(this).find('.carousel-control-next').css({"bottom" : ""});
+			$(this).find('.carousel-control-next').css({"top" : ""});
+			$(this).closest('.rect').css({"border-radius" : ""});
+			$(this).closest('.rect').css({"padding" : ""});
+			$(this).closest('.item img').css("border-radius", "25px");
+			$(this).find('.arrowbox').css({"opacity" : ""});
+	  		$(this).find('.owl-dots').css({"opacity" : ""});
+	  		// Don't hide anything
+			$(this).closest('.rect').hover(function(){
+				$(this).find('.arrowbox').css({"opacity" : ""});
+		  		$(this).find('.owl-dots').css({"opacity" : ""});
+			});
 		} else {
-			$(this).find('.carousel-control-next').css({"width" : "45px"});
-			// $(this).closest('div.col-12').css({"max-width" : ""});
-			// $(this).closest('div.col-12').css({"margin-right" : ""});
+			// Expand right arrow control
+			$(this).find('.carousel-control-next').css("width", "45px");
+			$(this).find('.carousel-control-next').css("bottom", "20px");
+			$(this).find('.carousel-control-next').css("top", "0");
+			$(this).closest('.rect').css("border-radius", "6px");
+			$(this).closest('.item img').css("border-radius", "6px");
+			$(this).closest('.rect').css("padding", "0.25rem 0 0.25rem 0");
+			$(this).find('.arrowbox').css("opacity", ".4");
+	      	$(this).find('.owl-dots').css("opacity", "1");
+
+      		// Hide arrowbox and owldots
+			$(this).closest('.rect').hover(function(){
+				console.log('hovaa');
+		      	$(this).find('.arrowbox').css("opacity", ".4");
+		      	$(this).find('.owl-dots').css("opacity", "1");
+		  	}, 
+			function() {
+		  		$(this).find('.arrowbox').css({"opacity" : ""});
+		  		$(this).find('.owl-dots').css({"opacity" : ""});
+			});
 		}
 	});
+});
+
+$(document).ready(function(){
+
+	$('.carousel-control-next').mouseenter(function(){
+		console.log('yoooo');
+		if ($(this).parent().find('button.owl-prev').hasClass('disabled')) {
+			console.log('lit');
+		}
+	});
+	$('.carousel-control-next').mouseleave(function(){
+		console.log('fam');
+		if ($(this).parent().find('button.owl-prev').hasClass('disabled')) {
+			console.log('yas');
+		}
+	});
+
 });
 
 
