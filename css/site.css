@@ -370,9 +370,9 @@ span {
   transition: .4s;
 }
 
-.item img:hover {
+/*.item img:hover {
   transform: scale(1.05)!important;
-}
+}*/
 
 .card-body {
   padding-left: 0rem;
@@ -380,11 +380,17 @@ span {
 
 .rect {
   background-color: white; /* offwhite */
-  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+  box-shadow: 0px 1px 10px rgba(0,0,0,.15);
   border-radius: 25px;
   padding: 1.5rem 0 .25rem 0;
   margin-bottom: 25px;
-  transition: .4s;
+  transition: .6s;
+}
+
+.rect:hover {
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+  box-shadow: 0px 2px 10px rgba(0,0,0,.15)
 }
 
 #owl-demo .item img{
@@ -561,6 +567,6 @@ div.col-12 {
   transition: .4s;
 }
 
-.scale-on-hover:hover {
+/*.scale-on-hover:hover {
   transform: scale(1.05);
-}
+}*/

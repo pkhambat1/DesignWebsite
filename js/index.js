@@ -21,6 +21,18 @@ $(window).onload = function() {
     document.body.className += " loaded";
 }
 
+var hideOwlNav = function () {
+    $('.arrowbox, .owl-dots').css("opacity", "0");
+    $('.rect').hover(function () {
+        $(this).find('.arrowbox').css("opacity", ".4");
+        $(this).find('.owl-dots').css("opacity", "1");
+    },
+        function () {
+            $(this).find('.arrowbox').css("opacity", "0");
+            $(this).find('.owl-dots').css("opacity", "0");
+        });
+};
+
 $(function() {
 	var elements = document.getElementsByClassName('typewrite');
 	for (var i=0; i<elements.length; i++) {
@@ -98,9 +110,9 @@ $(document).ready(function() {
 
 	$('.owl-carousel').owlCarousel({
 		items:1,
-		margin:4,
+		margin:0,
 		autoHeight:true,
-		mouseDrag:false,
+		mouseDrag:true,
 		stagePadding:0,
 		autoplay:false,
 		nav:true,
@@ -116,7 +128,9 @@ $(document).ready(function() {
 	    },
 		navText: ["<div class=\"carousel-control-prev\" role=\"button\" data-slide=\"prev\"><div class=\"arrowbox\"><i class=\"fa fa-angle-left align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Previous</span></div>",
 					"<div class=\"carousel-control-next\" role=\"button\" data-slide=\"next\"><div class=\"arrowbox\"><i class=\"fa fa-angle-right align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Next</span></div>"]
-	});
+	}).on("dragged.owl.carousel", function (event) {
+        $('html,body').animate({ scrollTop: $(this).closest('.rect').offset().top - 80}, 400);
+    });
 });
 
 $(document).ready(function(){
@@ -125,7 +139,7 @@ $(document).ready(function(){
     }); 
 });  
 
-$(document).ready(function(){
+var slideCarousel = function(){
 	$('.owl-carousel').on('translate.owl.carousel', function(){
 		if ($(this).find('button.owl-prev').hasClass('disabled')) {
 
@@ -138,11 +152,16 @@ $(document).ready(function(){
 			$(this).closest('.item img').css("border-radius", "25px");
 			$(this).find('.arrowbox').css({"opacity" : ""});
 	  		$(this).find('.owl-dots').css({"opacity" : ""});
-	  		// Don't hide anything
+	  		// Revert arrowbox to hidden
 			$(this).closest('.rect').hover(function(){
 				$(this).find('.arrowbox').css({"opacity" : ""});
 		  		$(this).find('.owl-dots').css({"opacity" : ""});
 			});
+
+			// revert rect hover to expand
+			$(this).closest('.rect:hover').css({"transform" : ""});
+			$(this).closest('.rect:hover').css({"margin-bottom" : ""});
+
 		} else {
 			// Expand right arrow control
 			$(this).find('.carousel-control-next').css("width", "45px");
@@ -154,7 +173,7 @@ $(document).ready(function(){
 			$(this).find('.arrowbox').css("opacity", ".4");
 	      	$(this).find('.owl-dots').css("opacity", "1");
 
-      		// Hide arrowbox and owldots
+      		// Unide arrowbox and owldots
 			$(this).closest('.rect').hover(function(){
 				console.log('hovaa');
 		      	$(this).find('.arrowbox').css("opacity", ".4");
@@ -164,26 +183,13 @@ $(document).ready(function(){
 		  		$(this).find('.arrowbox').css({"opacity" : ""});
 		  		$(this).find('.owl-dots').css({"opacity" : ""});
 			});
+			$(this).closest('.rect:hover').css("transform", "scale(1.05)");
+			$(this).closest('.rect:hover').css("margin-bottom", "40px");
+
 		}
 	});
-});
+};
 
-$(document).ready(function(){
-
-	$('.carousel-control-next').mouseenter(function(){
-		console.log('yoooo');
-		if ($(this).parent().find('button.owl-prev').hasClass('disabled')) {
-			console.log('lit');
-		}
-	});
-	$('.carousel-control-next').mouseleave(function(){
-		console.log('fam');
-		if ($(this).parent().find('button.owl-prev').hasClass('disabled')) {
-			console.log('yas');
-		}
-	});
-
-});
 
 
 
