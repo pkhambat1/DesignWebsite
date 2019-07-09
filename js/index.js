@@ -1,7 +1,20 @@
+$(document).ready(function() {
+	slideCarousel();
+	loadCarousel();
+	typing();
+});
+
+function typing(){
+    $("#typing").typed({
+        strings: ["", "", "", "", " coding . . . ", "", " drawing . . .", "", "writing . . .", "", " photography . . .", "", " math . . .", "", " cars . . .", "", " Apple keynotes . . .", "", " coding . . ."],
+        typeSpeed: 0
+    });
+};
+
+
 // Global vars
 
 var toggleVal = "initial";
-var itemCount = 2;
 
 // Being extremely nitpicky here
 $(window).on("resize", function(event){
@@ -17,10 +30,6 @@ $(window).on("resize", function(event){
   	}
 });
 
-$(window).onload = function() {
-    document.body.className += " loaded";
-}
-
 var hideOwlNav = function () {
     $('.arrowbox, .owl-dots').css("opacity", "0");
     $('.rect').hover(function () {
@@ -33,53 +42,35 @@ var hideOwlNav = function () {
         });
 };
 
-$(function() {
-	var elements = document.getElementsByClassName('typewrite');
-	for (var i=0; i<elements.length; i++) {
-		var toRotate = elements[i].getAttribute('data-type');
-		var period = elements[i].getAttribute('data-period');
-		if (toRotate) {
-			new TxtType(elements[i], JSON.parse(toRotate), period);
-		}
-	}
-});	
-
-$(function(){
-	$("#typing").typed({
-		strings: ["", "", "", "", " coding . . . ", "", " drawing . . .", "", "writing . . .", "", " photography . . .", "", " math . . .", "", " cars . . .", "", " Apple keynotes . . .", "", " coding . . ."],
-		typeSpeed: 0
-	});
-});
-
 function navbarChange(toggleVal) {
-	// if scrolled down
-	if ($(this).scrollTop() > $('.fixed-top').height()) {
-		$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"color" : "#212529"});
-		$('.navbar-light').css("background", "#fff");
-		$('.navbar-light').css("opacity", ".96");
-		$('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
-		if (toggleVal == "uncollapsed") {
-			$('.navbar-light').css("padding", "0px 5px 10px");
-		} else {
-			$('.navbar-light').css("padding", "0px 5px");
-		}
+    // if scrolled down
+    if ($(this).scrollTop() > $('.fixed-top').height()) {
+        $('#logo, .portfolio-navbar .navbar-nav .nav-link').css({ "color": "#212529" });
+        $('.navbar-light').css("background", "#fff");
+        $('.navbar-light').css("opacity", ".96");
+        $('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
+        if (toggleVal === "uncollapsed") {
+            $('.navbar-light').css("padding", "0px 5px 10px");
+        } else {
+            $('.navbar-light').css("padding", "0px 5px");
+        }
 
-		if (toggleVal == "collapsed" || toggleVal == "initial") {
-			$('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
-		}
-	// if on top 
-	} else {	
-			$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"font-size" : ""});
-			$('#logo, .portfolio-navbar .navbar-nav .nav-link').css({"color" : ""});
-			$('.navbar-light').css({"padding" : ""});
-			$('.navbar-light').css({"background" : ""});
-			$('.navbar-light').css({"opacity" : ""});
-		if(toggleVal == "collapsed" || toggleVal == "initial" || toggleVal == "stretchUncollapsed"){
-			$('.portfolio-navbar.navbar').css({"box-shadow" : ""});
-		} else {
-			$('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
-		}
-	}
+        if (toggleVal === "collapsed" || toggleVal === "initial") {
+            $('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
+        }
+        // if on top 
+    } else {
+        $('#logo, .portfolio-navbar .navbar-nav .nav-link').css({ "font-size": "" });
+        $('#logo, .portfolio-navbar .navbar-nav .nav-link').css({ "color": "" });
+        $('.navbar-light').css({ "padding": "" });
+        $('.navbar-light').css({ "background": "" });
+        $('.navbar-light').css({ "opacity": "" });
+        if (toggleVal === "collapsed" || toggleVal === "initial" || toggleVal === "stretchUncollapsed") {
+            $('.portfolio-navbar.navbar').css({ "box-shadow": "" });
+        } else {
+            $('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
+        }
+    }
 }
 
 // If scrolled
@@ -104,34 +95,32 @@ $(document).ready(function() {
 	});
 });
 
-
-
-$(document).ready(function() {
-
-	$('.owl-carousel').owlCarousel({
-		items:1,
-		margin:0,
-		autoHeight:true,
-		mouseDrag:true,
-		stagePadding:0,
-		autoplay:false,
-		nav:true,
-		lazyLoad:true,
-		responsiveClass:true,
-	    responsive:{
-	        0:{
-	            items:1,
-	        },
-	        768:{
-	            items:2,
-	        }
-	    },
-		navText: ["<div class=\"carousel-control-prev\" role=\"button\" data-slide=\"prev\"><div class=\"arrowbox\"><i class=\"fa fa-angle-left align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Previous</span></div>",
-					"<div class=\"carousel-control-next\" role=\"button\" data-slide=\"next\"><div class=\"arrowbox\"><i class=\"fa fa-angle-right align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Next</span></div>"]
-	}).on("dragged.owl.carousel", function (event) {
-        $('html,body').animate({ scrollTop: $(this).closest('.rect').offset().top - 80}, 400);
+var loadCarousel = function () {
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        margin: 3,
+        autoHeight: true,
+        autoHeightClass: 'owl-height',
+        mouseDrag: true,
+        autoplay: false,
+        nav: true,
+        lazyLoad: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            }
+        },
+        navText: ["<div class=\"carousel-control-prev\" role=\"button\" data-slide=\"prev\"><div class=\"arrowbox\"><i class=\"fa fa-angle-left align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Previous</span></div>",
+            "<div class=\"carousel-control-next\" role=\"button\" data-slide=\"next\"><div class=\"arrowbox\"><i class=\"fa fa-angle-right align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Next</span></div>"]
+    }).on("dragged.owl.carousel", function (event) {
+        $('html,body').animate({ scrollTop: $(this).closest('.rect').offset().top - 80 }, 400);
     });
-});
+
+};
 
 $(document).ready(function(){
     $('.carousel-control-prev, .carousel-control-next, .owl-dots').on('click', function(){
@@ -139,57 +128,53 @@ $(document).ready(function(){
     }); 
 });  
 
-var slideCarousel = function(){
-	$('.owl-carousel').on('translate.owl.carousel', function(){
-		if ($(this).find('button.owl-prev').hasClass('disabled')) {
+var slideCarousel = function () {
+    $('.owl-carousel').on('translate.owl.carousel', function () {
+        if ($(this).find('button.owl-prev').hasClass('disabled')) {
 
-			// revert to right arrow control dimensions
-			$(this).find('.carousel-control-next').css({"width" : ""});
-			$(this).find('.carousel-control-next').css({"bottom" : ""});
-			$(this).find('.carousel-control-next').css({"top" : ""});
-			$(this).closest('.rect').css({"border-radius" : ""});
-			$(this).closest('.rect').css({"padding" : ""});
-			$(this).closest('.item img').css("border-radius", "25px");
-			$(this).find('.arrowbox').css({"opacity" : ""});
-	  		$(this).find('.owl-dots').css({"opacity" : ""});
-	  		// Revert arrowbox to hidden
-			$(this).closest('.rect').hover(function(){
-				$(this).find('.arrowbox').css({"opacity" : ""});
-		  		$(this).find('.owl-dots').css({"opacity" : ""});
+            // revert to right arrow control dimensions
+            $(this).find('.carousel-control-next').css({ "width": "" });
+            $(this).find('.carousel-control-next').css({ "bottom": "" });
+            $(this).find('.carousel-control-next').css({ "top": "" });
+            //$(this).closest('.rect').css({ "border-radius": "" });
+            //$(this).closest('.rect').css({ "padding": "" });
+            $(this).find('.arrowbox').css({ "opacity": "" });
+            $(this).find('.owl-dots').css({ "opacity": "" });
+            // Revert arrowbox to hidden
+            $(this).closest('.rect').hover(function () {
+                $(this).find('.arrowbox').css({ "opacity": "" });
+                $(this).find('.owl-dots').css({ "opacity": "" });
+            });
+
+            // revert rect hover to expand
+            $(this).closest('.rect:hover').css({ "transform": "" });
+            $(this).closest('.rect:hover').css({ "margin-bottom": "" });
+
+        } else {
+            // Expand right arrow control
+            $(this).find('.carousel-control-next').css("width", "45px");
+            $(this).find('.carousel-control-next').css("bottom", "20px");
+            $(this).find('.carousel-control-next').css("top", "0");
+            //$(this).closest('.rect').css("border-radius", "6px");
+            //$(this).closest('.rect').css("padding", "0.25rem 0 0.25rem 0");
+            $(this).find('.arrowbox').css("opacity", ".4");
+            $(this).find('.owl-dots').css("opacity", "1");
+
+            // Unide arrowbox and owldots
+            $(this).closest('.rect').hover(function () {
+                console.log('hovaa');
+                $(this).find('.arrowbox').css("opacity", ".4");
+                $(this).find('.owl-dots').css("opacity", "1");
+            },
+			function () {
+				$(this).find('.arrowbox').css({ "opacity": "" });
+				$(this).find('.owl-dots').css({ "opacity": "" });
 			});
+			$(this).closest('.rect:hover').css("transform" , "scale(1)");
 
-			// revert rect hover to expand
-			$(this).closest('.rect:hover').css({"transform" : ""});
-			$(this).closest('.rect:hover').css({"margin-bottom" : ""});
-
-		} else {
-			// Expand right arrow control
-			$(this).find('.carousel-control-next').css("width", "45px");
-			$(this).find('.carousel-control-next').css("bottom", "20px");
-			$(this).find('.carousel-control-next').css("top", "0");
-			$(this).closest('.rect').css("border-radius", "6px");
-			$(this).closest('.item img').css("border-radius", "6px");
-			$(this).closest('.rect').css("padding", "0.25rem 0 0.25rem 0");
-			$(this).find('.arrowbox').css("opacity", ".4");
-	      	$(this).find('.owl-dots').css("opacity", "1");
-
-      		// Unide arrowbox and owldots
-			$(this).closest('.rect').hover(function(){
-				console.log('hovaa');
-		      	$(this).find('.arrowbox').css("opacity", ".4");
-		      	$(this).find('.owl-dots').css("opacity", "1");
-		  	}, 
-			function() {
-		  		$(this).find('.arrowbox').css({"opacity" : ""});
-		  		$(this).find('.owl-dots').css({"opacity" : ""});
-			});
-			$(this).closest('.rect:hover').css("transform", "scale(1.05)");
-			$(this).closest('.rect:hover').css("margin-bottom", "40px");
-
-		}
-	});
+        }
+    });
 };
-
 
 
 
