@@ -1,7 +1,7 @@
 // Global vars
 var toggleVal = "initial";
 
-$(document).ready(function() {
+$(document).ready(() => {
 	loadCarousel();
     scrollCarousel();
     slideCarousel();
