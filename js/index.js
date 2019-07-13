@@ -17,8 +17,9 @@ var scrollCarousel = () => {
 
 function typing(){
     $("#typing").typed({
-        strings: ["", "", "", "", " with research . . .", "", " with design . . .", "", " with programming . . . ", " . . ."],
-        typeSpeed: 0
+        strings: ["", "", "", "", " with research . . .", "", " with design . . .", "", " with programming . . . "],
+        typeSpeed: 0,
+        loop: true
     });
 };
 
