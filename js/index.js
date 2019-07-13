@@ -2,10 +2,10 @@
 var toggleVal = "initial";
 
 $(document).ready(() => {
-	loadCarousel();
+    loadCarousel();
     scrollCarousel();
     slideCarousel();
-	typing();
+    typing();
 });
 
 
@@ -17,22 +17,22 @@ var scrollCarousel = () => {
 
 function typing(){
     $("#typing").typed({
-        strings: ["", "", "", "", " coding . . . ", "", " drawing . . .", "", "writing . . .", "", " photography . . .", "", " math . . .", "", " cars . . .", "", " Apple keynotes . . .", "", " coding . . ."],
+        strings: ["", "", "", "", " with research . . .", "", " with design . . .", "", " with programming . . . ", " . . ."],
         typeSpeed: 0
     });
 };
 
 // Being extremely nitpicky here
 $(window).on("resize", function(){
-  	if ($(this).width() >= 992 && toggleVal == "uncollapsed") {
-  		console.log("if hit!");
-  		toggleVal = "stretchUncollapsed";
-  		navbarChange("stretchUncollapsed");
-  	} else if ($(this).width() < 992 && toggleVal == "stretchUncollapsed") {
-  		console.log("else if hit!");
-  		toggleVal = "uncollapsed";
-  		navbarChange("uncollapsed");
-  	}
+    if ($(this).width() >= 992 && toggleVal == "uncollapsed") {
+        console.log("if hit!");
+        toggleVal = "stretchUncollapsed";
+        navbarChange("stretchUncollapsed");
+    } else if ($(this).width() < 992 && toggleVal == "stretchUncollapsed") {
+        console.log("else if hit!");
+        toggleVal = "uncollapsed";
+        navbarChange("uncollapsed");
+    }
 });
 
 var hideOwlNav = () => {
@@ -41,10 +41,10 @@ var hideOwlNav = () => {
         $(this).find('.arrowbox').css("opacity", ".4");
         $(this).find('.owl-dots').css("opacity", "1");
     },
-        function () {
-            $(this).find('.arrowbox').css("opacity", "0");
-            $(this).find('.owl-dots').css("opacity", "0");
-        });
+    function () {
+        $(this).find('.arrowbox').css("opacity", "0");
+        $(this).find('.owl-dots').css("opacity", "0");
+    });
 };
 
 function navbarChange(toggleVal) {
@@ -59,7 +59,7 @@ function navbarChange(toggleVal) {
         } else {
             $('.navbar-light').css("padding", "0px 5px");
         }
-
+        
         if (toggleVal === "collapsed" || toggleVal === "initial") {
             $('.portfolio-navbar.navbar').css("box-shadow", "0 4px 10px rgba(0,0,0,.15)");
         }
@@ -80,22 +80,22 @@ function navbarChange(toggleVal) {
 
 // If scrolled
 $(document).on('scroll', () => {
-	navbarChange(toggleVal);
+    navbarChange(toggleVal);
 });
 
 $(document).ready(() => {
-
-	// If collapsed
-	$('.navbar').on('hide.bs.collapse', () => {
-		toggleVal = "collapsed";
-		navbarChange("collapsed");
-	});
-
-	// If uncollapsed
-	$('.navbar').on('show.bs.collapse', () => {
-		toggleVal = "uncollapsed";
-		navbarChange("uncollapsed");
-	});
+    
+    // If collapsed
+    $('.navbar').on('hide.bs.collapse', () => {
+        toggleVal = "collapsed";
+        navbarChange("collapsed");
+    });
+    
+    // If uncollapsed
+    $('.navbar').on('show.bs.collapse', () => {
+        toggleVal = "uncollapsed";
+        navbarChange("uncollapsed");
+    });
 });
 
 var loadCarousel = () => {
@@ -118,17 +118,17 @@ var loadCarousel = () => {
             }
         },
         navText: ["<div class=\"carousel-control-prev\" role=\"button\" data-slide=\"prev\"><div class=\"arrowbox\"><i class=\"fa fa-angle-left align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Previous</span></div>",
-            "<div class=\"carousel-control-next\" role=\"button\" data-slide=\"next\"><div class=\"arrowbox\"><i class=\"fa fa-angle-right align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Next</span></div>"]
+        "<div class=\"carousel-control-next\" role=\"button\" data-slide=\"next\"><div class=\"arrowbox\"><i class=\"fa fa-angle-right align-middle mt-4 mb-4 \"></i></div><span class=\"sr-only\">Next</span></div>"]
     }).on("dragged.owl.carousel", function () {
         $('html,body').animate({ scrollTop: $(this).closest('.rect').offset().top - 80 }, 400);
     });
-
+    
 };
 
 var slideCarousel = () => {
     $('.owl-carousel').on('translate.owl.carousel', function () {
         if ($(this).find('button.owl-prev').hasClass('disabled')) {
-
+            
             // revert to right arrow control dimensions
             $(this).find('.carousel-control-next').css({ "width": "" });
             $(this).find('.carousel-control-next').css({ "bottom": "" });
@@ -140,10 +140,11 @@ var slideCarousel = () => {
                 $(this).find('.arrowbox').css({ "opacity": "" });
                 $(this).find('.owl-dots').css({ "opacity": "" });
             });
-
-            // revert rect hover to expand
-            $(this).closest('.rect:hover').css({ "transform": "" });
-
+            
+            // Hover has previous effect
+            $(this).closest('.rect:hover').css({"margin-bottom" : ""});
+            $(this).closest('.rect:hover').css({"box-shadow" : ""});
+            
         } else {
             // Expand right arrow control
             $(this).find('.carousel-control-next').css("width", "45px");
@@ -151,18 +152,21 @@ var slideCarousel = () => {
             $(this).find('.carousel-control-next').css("top", "0");
             $(this).find('.arrowbox').css("opacity", ".4");
             $(this).find('.owl-dots').css("opacity", "1");
-
+            
             // Unide arrowbox and owldots
             $(this).closest('.rect').hover(function () {
                 console.log('hovaa');
                 $(this).find('.arrowbox').css("opacity", ".4");
                 $(this).find('.owl-dots').css("opacity", "1");
             },
-                function () {
-                    $(this).find('.arrowbox').css({ "opacity": "" });
-                    $(this).find('.owl-dots').css({ "opacity": "" });
-                });
-            $(this).closest('.rect:hover').css("transform", "scale(1)");
+            function () {
+                $(this).find('.arrowbox').css({ "opacity": "" });
+                $(this).find('.owl-dots').css({ "opacity": "" });
+            });
+            // Hover has 0 effect
+            $(this).closest('.rect:hover').css("margin-bottom", "25px");
+            $(this).closest('.rect:hover').css("box-shadow", "0px 2px 7px 2px rgba(0,0,0,.15)");
+            
         }
     });
 };
