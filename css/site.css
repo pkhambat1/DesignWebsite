@@ -508,11 +508,7 @@ button:focus {
   padding: 1rem;
   margin-left: .25rem;
   margin-right: .25rem;
-  background-color: #f9f9f9;  
-}
-
-.titleCaption {
-  min-height: 180px;
+  /* background-color: #f9f9f9;   */
 }
 
 div.col-12 {
@@ -612,3 +608,6 @@ section {
   color: rgb(0,0,0,.75);
 }
 
+footer span {
+  font-family: 'medium-content-sans-serif-font';
+}
