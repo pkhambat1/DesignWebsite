@@ -7,90 +7,134 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<title>Home - Pezanne Khambatta</title>
 	<meta name="description" content="Hello, I am Pezanne">
-
+	
 	<!-- Official Bootstrap Links -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+	
 	<!-- Hamburger -->
 	<link href="dist/hamburgers.css" rel="stylesheet">
-
+	
 	<!-- OwlCarousel -->
 	<link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
 	<script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
-
+	
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Open+Sans:400,700|Oswald|Raleway:400,700|Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-
+	
 	<!--Favicon-->
 	<link rel="shortcut icon" type="img/png" href="img/favicon.png">
 	<link rel="stylesheet" href="css/site.css">
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<script src="typed.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-
+	<script type="text/javascript" src="js/index.js"></script>
+	
+	<!-- <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script> -->
+	
+	
 </head>
 
 <body>
+	<!-- Navbar -->
 	<main class="page landing-page">
-		<!-- <section class=" justify-content-xl-start block-intro border-bottom"> -->
-			<div class="portfolio-block">
-				<header>
-					<nav class="navbar navbar-light navbar-expand-lg fixed-top portfolio-navbar">
-						<div class="container"><a class="nav-link logo" id="logo" href="index.html"><u>Pezanne Khambatta</u></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><i class="fas fa-bars" id="hamburger"></i></button>
-							<div class="collapse navbar-collapse" id="navbarNav">
-								<ul class="nav navbar-nav ml-auto">
-									<li class="nav-item item" role="presentation">
-										<a class="nav-link" href="index.html">
-											<i class="fas fa-circle" style="opacity: 0"></i>
-											Design 
-										</a>
-									</li>
-									<li class="nav-item item" role="presentation">
-										<a class="nav-link" href="code.html">
-											<i class="fas fa-circle"></i>
-											Code 
-										</a>
-									</li>
-									<li class="nav-item item pr-0" role="presentation">
-										<a class="nav-link" href="fun.html">
-											<i class="fas fa-circle" style="opacity: 0"></i>
-											Fun 
-										</a>
-									</li>
-									<!-- <li id="magic-line"></li> -->
-								</ul>
-							</div>
+		<div class="portfolio-block">
+			<header>
+				<nav class="navbar navbar-light navbar-expand-lg fixed-top portfolio-navbar">
+					<div class="container">
+						<a class="nav-link logo" id="logo" href="index.html"><u>Pezanne Khambatta</u></a>
+						<button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><i class="fas fa-bars" id="hamburger"></i></button>
+						<div class="collapse navbar-collapse" id="navbarNav">
+							<ul class="nav navbar-nav ml-auto">
+								<li class="nav-item item" role="presentation">
+									<a class="nav-link" href="index.html">
+										<i class="fas fa-circle" style="opacity: 0"></i>
+										Design 
+										<!-- 📐 -->
+									</a>
+								</li>
+								<li class="nav-item item" role="presentation">
+									<a class="nav-link" href="code.html">
+										<i class="fas fa-circle"></i>
+										Code 
+										<!-- 💻 -->
+									</a>
+								</li>
+								<li class="nav-item item pr-0" role="presentation">
+									<a class="nav-link pr-0" href="fun.html">
+										<i class="fas fa-circle" style="opacity: 0"></i>
+										Fun 
+										<!-- 🍕 -->
+									</a>
+								</li>
+							</ul>
 						</div>
-					</nav>
-				</header>
-			</div>
-		<!-- </section> -->
+					</div>
+				</nav>
+			</header>
+		</div>
 	</main>
 	
+	<!-- Intro -->
 	<div class="container">
-	
-
-	</div>
-
-	<footer class="page-footer">
-		
-		<div class="container">
-			<!-- <div class="links"><a href="#">About me</a><a href="#">Contact me</a><a href="#">Projects</a></div> -->
-			<div class="social-icons">
-				<a href="#">
-					<i class="icon ion-social-github"></i>
-				</a>
-				<a href="#">
-					<i class="icon ion-social-linkedin"></i>
-				</a>
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<span>I also write articles on Medium.</span>
+				
 			</div>
 		</div>
-	</footer>
-</body>
-
-</html>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div id="medium-widget"></div>
+				<script src="https://medium-widget.pixelpoint.io/widget.js"></script>
+				<script>MediumWidget.Init({renderTo: '#medium-widget', params: {"resource":"https://medium.com/@pezannekhambatta/recursion-6e1b66e30b6c","postsPerLine":3,"limit":4,"picture":"big","fields":["description","author","claps","publishAt"],"ratio":"landscape"}})</script>
+				
+				
+				<!-- <div id="fm-medium-embed"></div>
+					<script src="//data.feedmirror.com/embed.js"></script>
+					<script>
+						var fmSettings = {
+							feedURL: 'https://data.feedmirror.com/-LkSSDbEA59MTVNq8rNY.json',
+							integration: 'medium-embed',
+							linkOutText: 'Read more',
+							linkToMediumProfileText: 'Subscribe on Medium',
+							postsCount: 3,
+							element: 'fm-medium-embed'
+						};
+						feedmirror.initialize(fmSettings);
+					</script> -->
+					
+					<!-- <a class="embedly-card" data-card-controls="0" href="https://medium.com/@pezannekhambatta/recursion-6e1b66e30b6c">Recursion - Pezanne Khambatta - Medium</a> -->
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<footer>	
+			<div class="container p-4">
+				<div class="row text-center">
+					<div class="col-12 social-icons">
+						<a href="https://github.com/pkhambat1">
+							<i class="fab fa-github"></i>
+						</a>
+						<a href="https://www.linkedin.com/in/pezanne">
+							<i class="fab fa-linkedin"></i>
+						</a>
+						<a href="https://medium.com/@pezannekhambatta">
+							<i class="fab fa-medium"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+	</body>
+	
+	</html>
