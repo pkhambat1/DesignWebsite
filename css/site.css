@@ -593,13 +593,22 @@ section {
   }
 }
 
+.footer-icons a {
+  font-size: 23px;
+  color: rgb(0,0,0,.4);
+}
+
 .social-icons a {
   font-size: 35px;
-  color: rgb(0,0,0,.20);
+  color: rgb(0,0,0,.2);
   text-decoration: none;
+}
+
+.social-icons a, .footer-icons a {
   transition: .4s;
 }
 
-.social-icons a:hover {
+.social-icons a:hover, .footer-icons a:hover {
   color: rgb(0,0,0,.75);
 }
+
