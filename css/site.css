@@ -353,7 +353,7 @@ span.emoji {
   padding: 0px 0px 0px 0px;
 }
 
-.fa-circle {
+nav .fa-circle {
   color: blue;
   /*color: #00A0DC;*/
   padding-bottom: 2px;
@@ -611,3 +611,14 @@ section {
 footer span {
   font-family: 'medium-content-sans-serif-font';
 }
+
+.about-me span {
+  font-size: 26px;
+  font-family: 'medium-content-sans-serif-font';
+}
+
+.about-me p {
+  font-family: 'medium-content-sans-serif-font';
+}
+
+
