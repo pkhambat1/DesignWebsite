@@ -647,12 +647,12 @@ footer span {
   font-family: 'medium-content-sans-serif-font';
 }
 
-.about-me span {
+.about-me span, .contact span {
   font-size: 26px;
   font-family: 'medium-content-sans-serif-font';
 }
 
-.about-me p {
+.about-me p, .contact p {
   font-family: 'medium-content-sans-serif-font';
 }
 
