@@ -18,12 +18,12 @@ body {
   text-align: left;
   background-color: #fff;
   height: 100%;
-
+  
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-      -moz-animation: fadein 2s; /* Firefox < 16 */
-      -ms-animation: fadein 2s; /* Internet Explorer */
-        -o-animation: fadein 2s; /* Opera < 12.1 */
-          animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -218,8 +218,8 @@ body {
 }
 
 .title {
-    font-size: 32px;
-    margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 p, p:hover {
@@ -253,11 +253,6 @@ span.emoji {
   padding-left: 10px;
 }
 
-.portfolio-block {
-  padding-bottom: 30px;
-  padding-top: 85px;
-}
-
 .border-bottom {
   border-bottom: 1px solid #dee2e6!important;
 }
@@ -267,10 +262,10 @@ span.emoji {
   padding-bottom: 60px;
 }
 
- .fixed-top {  
-	 transition:color 200ms ease-in; 
-	 transition:background-color 300ms ease-in; 
- } 
+.fixed-top {  
+  transition:color 200ms ease-in; 
+  transition:background-color 300ms ease-in; 
+} 
 
 .fixed-top.scrolled {
   background-color: white;
@@ -304,51 +299,38 @@ span.emoji {
 }
 
 .typed-cursor {
-    /*color: #66ff66;*/
-    color: #20D188;
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+  /*color: #66ff66;*/
+  color: #20D188;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
 }
 
 @keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 @-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 @-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-
-.portfolio-block.projects-cards h6 {
-  font-weight: 400;
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
-  margin-bottom: 60px;
-  margin-top: 30px;
-}
-
-#magic-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100px;
-  height: 4px;
-  background: #fe4902;
+  margin-top: 35px;
+  margin-bottom: 40px;
 }
 
 #logo {
@@ -358,12 +340,18 @@ span.emoji {
   /*padding-top: 10px;*/
 }
 
+.portfolio-block {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+
 #logo:hover {
   color: rgba(0,0,0,.7);
 }
 
 .nav-item {
-    padding-right: 2rem;
+  padding-right: 2rem;
 }
 
 .navbar-light {
@@ -422,10 +410,10 @@ nav .fa-circle {
   position: relative;
   top: 0;
 }
-  .rect:hover {
-    top: -5px;
-    box-shadow: 0px 4px 18px 5px rgba(0,0,0,.15);
-  }
+.rect:hover {
+  top: -5px;
+  box-shadow: 0px 4px 18px 5px rgba(0,0,0,.15);
+}
 
 #owl-demo .item img{
   display: block;
@@ -590,16 +578,13 @@ section {
 }
 
 .scroll-down:before {
-    position: absolute;
-    top: calc(50% - 8px);
-    left: calc(50% - 6px);
-    transform: rotate(-45deg);
-    display: block;
-    width: 18px;
-    height: 18px;
-    content: "";
-    border: 2px solid rgba(0,0,0,.4);
-    border-width: 0px 0 2px 2px;
+  transform: rotate(-45deg);
+  display: block;
+  width: 18px;
+  height: 18px;
+  content: "";
+  border: 2px solid rgba(0,0,0,.4);
+  border-width: 0px 0 2px 2px;
 }
 
 @keyframes bounce {
@@ -659,3 +644,7 @@ footer span {
 .album iframe {
   min-width: 270px;
 } 
+
+.scrollTo {
+  padding-top: 100px; 
+}
