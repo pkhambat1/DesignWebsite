@@ -26,6 +26,10 @@ body {
   animation: fadein 2s;
 }
 
+img {
+  width: 100%;
+}
+
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -366,10 +370,6 @@ span.emoji {
   padding: 10px 15px 10px 15px;
 }
 
-/*.portfolio-navbar .navbar-nav .nav-link, #logo {
-  transition: .2s ease-in;
-}*/
-
 .nav-link {
   font-weight: 700;
   font-size: 22px;
@@ -384,17 +384,10 @@ nav .fa-circle {
 }
 
 .item img {
-  border-radius: 6px;
+  border-radius: 3px;
   max-width: 100%;
-  border-style:solid;
-  border-width: 1px;
-  border-color: rgb(0,0,0,.1);
   transition: .4s;
 }
-
-/*.item img:hover {
-  transform: scale(1.05)!important;
-}*/
 
 .card-body {
   padding-left: 0rem;
@@ -403,7 +396,7 @@ nav .fa-circle {
 .rect {
   background-color: white; /* offwhite */
   box-shadow: 0px 2px 10px 0px rgba(0,0,0,.15);
-  border-radius: 25px;
+  border-radius: 18px;
   padding: 1.5rem 0 .25rem 0;
   margin-bottom: 25px;
   transition: .4s;
@@ -411,7 +404,7 @@ nav .fa-circle {
   top: 0;
 }
 .rect:hover {
-  top: -5px;
+  /* top: -2px; */
   box-shadow: 0px 4px 18px 5px rgba(0,0,0,.15);
 }
 
@@ -454,8 +447,6 @@ nav .fa-circle {
   opacity: 0;
   background-color: black;
   width: 45px;
-  /*border-radius: 6px;*/
-  /*opacity: .6;*/
   vertical-align: middle;
   display: table-cell;
   font-size: 25px;
@@ -526,7 +517,7 @@ button:focus {
   border-style:solid;
   border-width: 1px;
   border-color: rgb(0,0,0,.15);
-  border-radius: 6px;
+  border-radius: 3px;
   box-shadow: 0 1px 1px rgba(0,0,0,.15);
   padding: 1rem;
   margin-left: .25rem;
@@ -632,18 +623,22 @@ footer span {
   font-family: 'medium-content-sans-serif-font';
 }
 
-.about-me span, .contact span {
+.about span, .contact span {
   font-size: 26px;
   font-family: 'medium-content-sans-serif-font';
 }
 
-.about-me p, .contact p {
+.about p, .contact p {
   font-family: 'medium-content-sans-serif-font';
 }
 
 .album iframe {
   min-width: 270px;
 } 
+
+.about > div {
+  margin-bottom: 6rem;
+}
 
 .scrollTo {
   padding-top: 100px; 
