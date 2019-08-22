@@ -26,7 +26,7 @@ var loadCarousel = () => {
     $('.owl-carousel').owlCarousel({
         items: 1,
         margin: 0,
-        slideBy: 2,
+        slideBy: 1,
         autoHeight: true,
         autoHeightClass: 'owl-height',
         mouseDrag: true,

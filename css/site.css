@@ -520,6 +520,7 @@ button:focus {
   border-radius: 3px;
   box-shadow: 0 1px 1px rgba(0,0,0,.15);
   padding: 1rem;
+  padding-bottom: 0;
   margin-left: .25rem;
   margin-right: .25rem;
   /* background-color: #f9f9f9;   */
