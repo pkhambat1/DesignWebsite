@@ -523,7 +523,7 @@ button:focus {
   padding-bottom: 0;
   margin-left: .25rem;
   margin-right: .25rem;
-  /* background-color: #f9f9f9;   */
+  background-color: #f9f9f9;  
 }
 
 div.col-12 {

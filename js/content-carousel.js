@@ -27,6 +27,7 @@ var loadCarousel = () => {
         items: 1,
         margin: 0,
         slideBy: 1,
+        singleItem: true,
         autoHeight: true,
         autoHeightClass: 'owl-height',
         mouseDrag: true,
