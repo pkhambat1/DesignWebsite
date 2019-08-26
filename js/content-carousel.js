@@ -82,7 +82,6 @@ var slideCarousel = () => {
             
             // Unide arrowbox and owldots
             $(this).closest('.rect').hover(function () {
-                console.log('hovaa');
                 $(this).find('.arrowbox').css("opacity", ".4");
                 $(this).find('.owl-dots').css("opacity", "1");
             },

@@ -6,7 +6,6 @@ $(document).ready(() => {
 });
 
 
-
 function typing(){
     $("#typing").typed({
         strings: ["", "", "", "", " with research . . .", "", " with design . . .", "", " with prototyping . . .", "", " with code . . . "],
@@ -18,11 +17,9 @@ function typing(){
 // Being extremely nitpicky here
 $(window).on("resize", function(){
     if ($(this).width() >= 992 && toggleVal == "uncollapsed") {
-        console.log("if hit!");
         toggleVal = "stretchUncollapsed";
         navbarChange("stretchUncollapsed");
     } else if ($(this).width() < 992 && toggleVal == "stretchUncollapsed") {
-        console.log("else if hit!");
         toggleVal = "uncollapsed";
         navbarChange("uncollapsed");
     }
