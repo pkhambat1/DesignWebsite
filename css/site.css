@@ -245,10 +245,11 @@ span {
 .intro {
   padding-left: 40px;
   padding-right: 40px;
+  min-height: 310px;
 }
 
 .intro span {
-  font-size: 38px;
+  font-size: 34px;
 }
 
 span.emoji {
@@ -509,7 +510,7 @@ nav .fa-circle {
   top: -25px;
 }
 
-button:focus {
+button:focus, nav-link {
   outline:0;
 }
 
