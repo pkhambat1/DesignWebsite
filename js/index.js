@@ -8,7 +8,7 @@ $(document).ready(() => {
 
 function typing(){
     $("#typing").typed({
-        strings: ["", "", "", "", " with research . . .", "", " with design . . .", "", " with prototyping . . .", "", " with code . . . "],
+        strings: ["", "", "", "", " with design...", "", " with software...", "", " with code.."],
         typeSpeed: 30,
         loop: true
     });

@@ -245,7 +245,13 @@ span {
 .intro {
   padding-left: 40px;
   padding-right: 40px;
-  min-height: 310px;
+  min-height: 300px;
+}
+
+@media (max-width: 750px) {
+  .intro {
+    min-height: 460px;
+  }
 }
 
 .intro span {
