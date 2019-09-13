@@ -247,15 +247,17 @@ span {
   padding-right: 40px;
   min-height: 300px;
 }
+.intro span {
+  font-size: 38px;
+}
 
-@media (max-width: 750px) {
+@media only screen and (max-width: 600px) {
   .intro {
     min-height: 460px;
   }
-}
-
-.intro span {
-  font-size: 34px;
+  .intro span {
+    font-size: 34px;
+  }
 }
 
 span.emoji {
