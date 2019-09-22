@@ -518,7 +518,7 @@ nav .fa-circle {
   top: -25px;
 }
 
-.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+.btn:focus, button:focus {
   outline: 0;
 }
 
