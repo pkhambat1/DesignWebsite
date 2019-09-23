@@ -1,2 +1,0 @@
-C:\Users\Pezanne Khambatta\DesignWebsite\obj\x86\Debug\DesignWebsite.csprojAssemblyReference.cache
-C:\Users\Pezanne Khambatta\DesignWebsite\obj\x86\Debug\DesignWebsite.csproj.CoreCompileInputs.cache
