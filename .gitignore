@@ -2,5 +2,4 @@ vendor/
 .env/
 notes.txt
 obj/
-css/site.css
-js/
+.DS_STORE
