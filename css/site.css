@@ -796,3 +796,9 @@ a.a-card:hover {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+
+.album iframe {
+  border: 1px solid #ffffff4a;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
