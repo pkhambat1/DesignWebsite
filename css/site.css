@@ -400,7 +400,7 @@ nav .fa-circle {
 .item img, .medium-thumbnail img {
   /* border-radius: 2px; */
   max-width: 100%;
-  transition: .4s;
+  transition: .4s !important;
 }
 
 /* .card-body {
@@ -677,7 +677,7 @@ footer span {
 .scrollTo {
   padding-top: 20px;
   margin-top: 100px; 
-  margin-bottom: 50px;
+  margin-bottom: 370px;
   background-color: whitesmoke;
 }
 

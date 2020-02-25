@@ -7,8 +7,7 @@ $(document).ready(() => {
 var scrollCarousel = () => {
     $('.carousel-control-prev, .carousel-control-next, .owl-dots').on('click', function () {
         // prevent overclicking glitch
-        if(!$(this).closest('.rect').find('button.owl-next').hasClass('disabled')) {
-            console.log($(this).closest('.rect').find('button.owl-next'))
+        if($(this).closest('.rect').offset().top - $(window).scrollTop() >= 11 && !$(this).closest('.rect').find('button.owl-next').hasClass('disabled')) {
             $('html,body').animate({ scrollTop: $(this).closest('.rect').offset().top - 10 }, 400);
         }
     });
@@ -34,10 +33,11 @@ var loadCarousel = () => {
         singleItem: true,
         autoHeight: true,
         autoHeightClass: 'owl-height',
-        mouseDrag: true,
+        mouseDrag: false,
         autoplay: false,
         nav: true,
         lazyLoad: true,
+        lazyLoadEager: true,
         responsiveClass: true,
         responsive: {
             0: {
@@ -104,7 +104,6 @@ var slideCarousel = () => {
             function () {
                 $(this).find('.arrowbox').css({ "opacity": "" });
                 $(this).find('.owl-dots').css({ "opacity": "" });
-                console.log('yeet');
             });
             // Hover has 0 effect
             $(this).closest('.rect:hover').css("top", "0");
