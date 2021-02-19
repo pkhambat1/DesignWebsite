@@ -1,227 +1,284 @@
-
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158927465-1"></script> -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158927465-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		
-		gtag('config', 'UA-158927465-1');
-	</script>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>Code - Pezanne Khambatta</title>
-	<meta name="description" content="Hello, I am Pezanne">
-	
-	<!-- Official Bootstrap Links -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	
-	<!-- OwlCarousel -->
-	<link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
-	<script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
-	
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Open+Sans:400,700|Oswald|Raleway:400,700|Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
-	
-	<!--Favicon-->
-	<link rel="shortcut icon" type="img/png" href="img/favicon.png">
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	
-	<!-- Main Stylesheet -->
-	<link rel="stylesheet" href="css/site.css">
-	<!-- <link rel="stylesheet" href="css/site.min.css"> -->
-	
-	<!-- Typed -->
-	<script type="text/javascript" src="typed.js"></script>
-	
-	<!-- Main Scripts -->
-	<script type="text/javascript" src="js/index.js"></script>
-	
-	<!-- Uglified JS -->
-	<!-- <script type="text/javascript" src="js.min.js"></script>	 -->
-	
-</head>
+      gtag("config", "UA-158927465-1");
+    </script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Code - Pezanne Khambatta</title>
+    <meta name="description" content="Hello, I am Pezanne" />
 
-<body>
+    <!-- Official Bootstrap Links -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- OwlCarousel -->
+    <link
+      rel="stylesheet"
+      href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css"
+    />
+    <script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Open+Sans:400,700|Oswald|Raleway:400,700|Roboto:400,700&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="img/png" href="img/favicon.png" />
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/site.css" />
+    <!-- <link rel="stylesheet" href="css/site.min.css"> -->
+
+    <!-- Typed -->
+    <script type="text/javascript" src="typed.js"></script>
+
+    <!-- Main Scripts -->
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- Uglified JS -->
+    <!-- <script type="text/javascript" src="js.min.js"></script>	 -->
+  </head>
+
+  <body>
     <!-- Navbar -->
     <main class="page landing-page">
-        <div class="portfolio-block">
-            <header>
-                <nav class="navbar navbar-light navbar-expand-lg portfolio-navbar">
-                    <div class="container-fluid pl-3">
-                        <div class="nav-item item">
-                            <a class="nav-link logo middle underline" id="logo" href="index.html">Pezanne Khambatta</a>
-                        </div>
-                        <button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span
-                            class="sr-only">Toggle navigation</span><i class="fas fa-bars"
-                            id="hamburger"></i></button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="nav navbar-nav ml-auto">
-                                    <div class="pr-3">
-                                        <li class="nav-item item" role="presentation">
-                                            <a class="middle nav-link" href="index.html">
-                                                <!-- <i class="fas fa-circle"></i> -->
-                                                Design
-                                                <!-- 📐 -->
-                                            </a>
-                                        </li>
-                                    </div>
-                                    <div class="pr-3">
-                                        <li class="nav-item item" role="presentation">
-                                            <a class="middle underline nav-link" href="code.html">
-                                                <!-- <i class="fas fa-circle" style="opacity: 0"></i> -->
-                                                Code
-                                                <!-- 💻 -->
-                                            </a>
-                                        </li>
-                                    </div>
-                                    <div class="pr-3">
-                                        <li class="nav-item item" role="presentation">
-                                            <a class="middle nav-link" href="fun.html">
-                                                <!-- <i class="fas fa-circle" style="opacity: 0"></i> -->
-                                                Fun
-                                                <!-- 🍕 -->
-                                            </a>
-                                        </li>
-                                    </div>
-                                    <div class="pr-3">
-                                        <li class="nav-item item" role="presentation">
-                                            <a class="middle nav-link" href="about.html">
-                                                <!-- <i class="fas fa-circle" style="opacity: 0"></i> -->
-                                                About Me
-                                                <!-- 🤓 -->
-                                            </a>
-                                        </li>
-                                    </div>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </header>
+      <div class="portfolio-block">
+        <header>
+          <nav class="navbar navbar-light navbar-expand-lg portfolio-navbar">
+            <div class="container-fluid pl-3">
+              <div class="nav-item item">
+                <a
+                  class="nav-link logo middle underline"
+                  id="logo"
+                  href="index.html"
+                  >Pezanne Khambatta</a
+                >
+              </div>
+              <button
+                data-toggle="collapse"
+                class="navbar-toggler"
+                data-target="#navbarNav"
+              >
+                <span class="sr-only">Toggle navigation</span
+                ><i class="fas fa-bars" id="hamburger"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                  <div class="pr-3">
+                    <li class="nav-item item" role="presentation">
+                      <a class="middle nav-link" href="index.html">
+                        <!-- <i class="fas fa-circle"></i> -->
+                        Design
+                        <!-- 📐 -->
+                      </a>
+                    </li>
+                  </div>
+                  <div class="pr-3">
+                    <li class="nav-item item" role="presentation">
+                      <a class="middle underline nav-link" href="code.html">
+                        <!-- <i class="fas fa-circle" style="opacity: 0"></i> -->
+                        Code
+                        <!-- 💻 -->
+                      </a>
+                    </li>
+                  </div>
+                  <div class="pr-3">
+                    <li class="nav-item item" role="presentation">
+                      <a class="middle nav-link" href="fun.html">
+                        <!-- <i class="fas fa-circle" style="opacity: 0"></i> -->
+                        Fun
+                        <!-- 🍕 -->
+                      </a>
+                    </li>
+                  </div>
+                  <div class="pr-3">
+                    <li class="nav-item item" role="presentation">
+                      <a class="middle nav-link" href="about.html">
+                        <!-- <i class="fas fa-circle" style="opacity: 0"></i> -->
+                        About Me
+                        <!-- 🤓 -->
+                      </a>
+                    </li>
+                  </div>
+                </ul>
+              </div>
             </div>
-        </main>
-	
-	<!-- Intro -->
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 mb-4">
-				<p>I also write articles on Medium. Stay tuned for more to follow. 🖋️</p>
-				<p><i> *Eventually, this section will also contain interesting CS projects I have worked on. </i></p>
-			</div>
-		</div>
-	</div>
-	
-	<div class="container">
-		<div class="row">
-			<div class="col-12 p-3">
-				<h6 style="color: #9c9c9c;">  
-					Medium Articles
-				</h6>
-			</div>
-			<div class="col-lg-4 col-md-6 col-12 mb-4">
-				<a class="a-card" href="https://medium.com/@pezannekhambatta/harvard-cs50-note-of-thanks-from-a-cs-grad-student-1f36acf4613f" target="_blank">
-					<div class="medium-thumbnail card">
-						<div class="img-box">
-							<img src="img/medium-cs50.jpeg" class="card-img-top">
-						</div>
-						<div class="card-body">
-							<p class="card-text"><b>Harvard CS50: Note of Thanks from a CS Grad Student</b></p>
-							<p class="card-text-small">TLDR: For anyone looking to switch fields into CS but lacking the proper knowledge, this is absolutely the best resource for you.</p>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-lg-4 col-md-6 col-12 mb-4">
-				<a class="a-card" href="https://medium.com/@pezannekhambatta/less-is-more-73dfffc8548f" target="_blank">
-					<div class="medium-thumbnail card">
-						<div class="img-box">
-							<img src="img/medium-less.jpeg" class="card-img-top">
-						</div>
-						<div class="card-body">
-							<p class="card-text"><b>“-less” is more</b></p>
-							<p class="card-text-small">In a world where products with more features are generally considered better, we are now seeing a trend of reductionism, where removing a seemingly integral part of the product is the new novel.</p>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-lg-4 col-md-6 col-12 mb-4">
-				<a class="a-card" href="https://medium.com/@pezannekhambatta/recursion-6e1b66e30b6c" target="_blank">
-					<div class="medium-thumbnail card">
-						<div class="img-box">
-							<img src="img/medium-recursion.png" class="card-img-top">
-						</div>
-						<div class="card-body">
-							<p class="card-text"><b>Recursion</b></p>
-							<p class="card-text-small">Even if you’ve not typed a line of code in your life, you must have come across instances of recursion in your day-to-day life.</p>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-lg-4 col-md-6 col-12 mb-4">
-				<a class="a-card" href="https://medium.com/@pezannekhambatta/hello-43054343465a" target="_blank">
-					<div class="medium-thumbnail card">
-						<div class="img-box">
-							<img src="img/medium-hello.png" class="card-img-top">
-						</div>
-						<div class="card-body">
-							<p class="card-text"><b>Hello!</b></p>
-							<p class="card-text-small">I am Pezanne Khambatta and I am an Industrial Designer with a keen inclination towards code and software development...</p>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-12 p-3">
-				<hr>
-				<h6 style="color: #9c9c9c;">  
-					CS Projects
-				</h6>
-				<div class="text-center">
-					<span class="textDescription"><i>Coming soon...</i></span>
-				</div>
-			</div>
-		</div>
-		
-	</div>
-	<footer>	
-		<div class="container-fluid p-4">
-			<div class="row">
-				<div class="col social-icons mr-auto">
-					<a href="https://github.com/pkhambat1" target="_blank">
-						<i class="fab fa-github"></i>
-					</a>
-					<a href="https://www.linkedin.com/in/pezanne" target="_blank">
-						<i class="fab fa-linkedin"></i>
-					</a>
-					<a href="https://medium.com/@pezannekhambatta" target="_blank">
-						<i class="fab fa-medium"></i>
-					</a>
-					<a href="https://www.behance.net/Pezanne_Khambatta" target="_blank">
-						<i class="fab fa-behance-square"></i>
-					</a>
-					
-				</div>
-				<div class="col-auto footer-icons">
-					<a href="./about.html">
-						<span>About</span>
-					</a>
-					<span style="color: rgb(0,0,0,.2);"><strong>|</strong></span>
-					<a href="./contact.html">
-						<span>Contact</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</footer>
-	
-</body>
+          </nav>
+        </header>
+      </div>
+    </main>
 
+    <!-- Intro -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 mb-4">
+          <p>
+            I also write articles on Medium. Stay tuned for more to follow. 🖋️
+          </p>
+          <p>
+            <i>
+              *Eventually, this section will also contain interesting CS
+              projects I have worked on.
+            </i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 p-3">
+          <h6 style="color: #9c9c9c">Medium Articles</h6>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <a
+            class="a-card"
+            href="https://medium.com/@pezannekhambatta/harvard-cs50-note-of-thanks-from-a-cs-grad-student-1f36acf4613f"
+            target="_blank"
+          >
+            <div class="medium-thumbnail card">
+              <div class="img-box">
+                <img src="img/medium-cs50.jpeg" class="card-img-top" />
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Harvard CS50: Note of Thanks from a CS Grad Student</b>
+                </p>
+                <p class="card-text-small">
+                  TLDR: For anyone looking to switch fields into CS but lacking
+                  the proper knowledge, this is absolutely the best resource for
+                  you.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <a
+            class="a-card"
+            href="https://medium.com/@pezannekhambatta/less-is-more-73dfffc8548f"
+            target="_blank"
+          >
+            <div class="medium-thumbnail card">
+              <div class="img-box">
+                <img src="img/medium-less.jpeg" class="card-img-top" />
+              </div>
+              <div class="card-body">
+                <p class="card-text"><b>“-less” is more</b></p>
+                <p class="card-text-small">
+                  In a world where products with more features are generally
+                  considered better, we are now seeing a trend of reductionism,
+                  where removing a seemingly integral part of the product is the
+                  new novel.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <a
+            class="a-card"
+            href="https://medium.com/@pezannekhambatta/recursion-6e1b66e30b6c"
+            target="_blank"
+          >
+            <div class="medium-thumbnail card">
+              <div class="img-box">
+                <img src="img/medium-recursion.png" class="card-img-top" />
+              </div>
+              <div class="card-body">
+                <p class="card-text"><b>Recursion</b></p>
+                <p class="card-text-small">
+                  Even if you’ve not typed a line of code in your life, you must
+                  have come across instances of recursion in your day-to-day
+                  life.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <a
+            class="a-card"
+            href="https://medium.com/@pezannekhambatta/hello-43054343465a"
+            target="_blank"
+          >
+            <div class="medium-thumbnail card">
+              <div class="img-box">
+                <img src="img/medium-hello.png" class="card-img-top" />
+              </div>
+              <div class="card-body">
+                <p class="card-text"><b>Hello!</b></p>
+                <p class="card-text-small">
+                  I am Pezanne Khambatta and I am an Industrial Designer with a
+                  keen inclination towards code and software development...
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 p-3">
+          <hr />
+          <h6 style="color: #9c9c9c">CS Projects</h6>
+          <div class="text-center">
+            <span class="textDescription"><i>Coming soon...</i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-fluid p-4">
+        <div class="row">
+          <div class="col social-icons mr-auto">
+            <a href="https://github.com/pkhambat1" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pezanne" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://medium.com/@pezannekhambatta" target="_blank">
+              <i class="fab fa-medium"></i>
+            </a>
+            <a href="https://www.behance.net/Pezanne_Khambatta" target="_blank">
+              <i class="fab fa-behance-square"></i>
+            </a>
+          </div>
+          <div class="col-auto footer-icons">
+            <a href="./about.html">
+              <span>About</span>
+            </a>
+            <span style="color: rgb(0, 0, 0, 0.2)"><strong>|</strong></span>
+            <a href="./contact.html">
+              <span>Contact</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
